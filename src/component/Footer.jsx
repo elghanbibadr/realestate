@@ -3,9 +3,10 @@ import twitter from "../assets/twitter.png"
 import instagram from "../assets/instagram.png"
 import tiktok from "../assets/tik_tok.png"
 import whatsapp from "../assets/whatsapp.png"
+import line from "../assets/line 1.png"
 const Footer = () => {
   return (
-    <footer className="bg-darkBlue text-right  mt-10 p-4 py-24">
+    <footer className="bg-darkBlue text-right  mt-10 p-4 pt-24">
       <div className=" flex  justify-evenly w-1/2 ">
       <div>
           <img src={logoWhite} alt="soum white logo" />
@@ -29,6 +30,8 @@ const Footer = () => {
           </ul>
           
         </div>
+      <img className="mt-10" src={line} alt="line illustration" />
+      <p className="text-center mt-8">جميع الحقوق محفوظة لسوم عقار © 2023</p>
     </footer>
   )
 }
