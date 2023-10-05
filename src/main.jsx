@@ -1,8 +1,9 @@
-import React from 'react'
-
+import Navbar from "./component/Navbar"
 const main = () => {
   return (
-    <div>main</div>
+    <>
+      <Navbar/>
+    </>
   )
 }
 
