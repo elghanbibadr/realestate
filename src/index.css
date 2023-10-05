@@ -56,3 +56,15 @@ body{
 nav li{
   cursor: pointer;
 }
+
+
+footer ul li{
+  font-family: 'DINNextLT-regular' ,sans-serif !important;
+  color: #A7A7A7;
+  margin-block: 10px;
+}
+
+
+footer{
+  direction: rtl;
+}
