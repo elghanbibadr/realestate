@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+/* TYPOGRAPHY */
 @font-face {
   font-family: 'sst arabic bold';
   src: url('fonts/sstArabic/alfont_com_AlFont_com_SST-Arabic-Bold-1.ttf') format('truetype');
@@ -10,6 +14,16 @@
   font-family: 'DINNextLT-Medium';
   src: url('fonts/dinnextlt/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'DINNextLT-bold';
+  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Bold-2.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DINNextLT-regular';
+  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-2.ttf') format('truetype');
+}
+
 
 
 nav{
@@ -21,6 +35,21 @@ nav ul button {
   font-weight: 400;
 }
 
+
+.dinNextLtBold{
+  font-family: 'DINNextLT-bold' ,sans-serif !important;
+}
+
+.dinNextLtRegular{
+  font-family: 'DINNextLT-regular' ,sans-serif !important;
+}
+
+/* CUSTOM STYLES */
+body{
+  background-color: #F5F5F5;
+  height: 300vh;
+  overflow-x: hidden;
+}
 nav li{
   cursor: pointer;
 }
