@@ -25,6 +25,13 @@
 //   plugins: [],
 // });
 import withMT from "@material-tailwind/react/utils/withMT";
+// import { defineConfig } from 'vite-plugin-windicss';
+// import daisyUI from 'daisyui';
+
+// export default defineConfig({
+//   plugins: [daisyUI()],
+//   // ... other configurations
+// });
 
 export default withMT({
   content: ["./index.html", "./src/**/*.{js,jsx}"],
@@ -36,5 +43,5 @@ export default withMT({
             textColor:'#6E7681'
           }
       },
-  plugins: [],
+
 });
