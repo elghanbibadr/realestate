@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'sst arabic bold';
+  src: url('fonts/sstArabic/alfont_com_AlFont_com_SST-Arabic-Bold-1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DINNextLT-Medium';
+  src: url('fonts/dinnextlt/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf') format('truetype');
+}
+
+
+nav{
+  font-family: "sst arabic bold",sans-serif !important;
+}
+
+nav ul button {
+  font-family: 'DINNextLT-Medium' ,sans-serif !important;
+  font-weight: 400;
+}
+
+nav li{
+  cursor: pointer;
+}
