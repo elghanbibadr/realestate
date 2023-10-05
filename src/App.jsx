@@ -3,6 +3,7 @@ import Hero from "./component/Hero"
 import { WhyUs } from "./component/WhyUs"
 import { WhatWeProvide } from "./component/WhatWeProvide"
 import { Callout } from "./component/Callout"
+import { ExploreOurProperties } from "./component/ExploreOurProperties"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <WhyUs />
       <WhatWeProvide/>
       <Callout/>
+      <ExploreOurProperties/>
       </>
   )
 }
