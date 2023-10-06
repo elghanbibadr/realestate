@@ -8,14 +8,17 @@ import Footer from "./component/Footer"
 const App = () => {
   return (
     <>
+    
       <Navbar/>
+    <main className="max-w-[1400px] mx-auto">
       <Hero/>
       <WhyUs />
       <WhatWeProvide/>
       <Background/>
       <ExploreOurProperties/>
+      </main>
       <Footer/>
-      </>
+    </>
   )
 }
 

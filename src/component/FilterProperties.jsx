@@ -14,7 +14,6 @@ import {
 
   export function FilterProperties() {
 
-    const rueOptions= ["Material Tailwind HTML", "Material Tailwind React", "Material Tailwind Vue"];
 
     return (
       <Card className="max-w-[330px] text-right   bg-[#EDF2F7] rounded-md  h-fit mt-20">
@@ -28,13 +27,13 @@ import {
               <p className="text-[16px] mb-2">نوع العقار</p>
               <div className="flex cursor-pointer text-[14px] justify-evenly  rounded-md mx-auto  bg-white flex-row-reverse">
                   <span className=" py-2">شقة</span>
-                  <span className="px-6 border-x py-2  border-1 border-[#cccccc44]">شقة</span>
-                  <span className=" py-2">شقة</span>
+                  <span className="px-6 border-x py-2  border-1 border-[#cccccc44]">  فيلا</span>
+                  <span className=" py-2"> أرض</span>
               </div>
            </div>
                    <CardBody className="p-0 mt-6">
                    <p className="text-[16px]  mb-2 text-darkBlue dinNextLtBold">المنطقة</p>
-           <SelectOptions options={rueOptions}/>
+           <SelectOptions/>
                    <p className="text-[16px] mb-2 mt-6 text-darkBlue dinNextLtBold">الحي</p>
            <SelectOptions/>
             <div className="mb-2 flex mt-4 items-center flex-row-reverse">
