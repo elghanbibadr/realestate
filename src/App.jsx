@@ -1,5 +1,7 @@
 import Navbar from "./component/Navbar"
 import Hero from "./component/Hero"
+import carouselImage1 from "../src/assets/modern-bedroom-suite-hotel1.png"
+
 import { WhyUs } from "./component/WhyUs"
 import { WhatWeProvide } from "./component/WhatWeProvide"
 import { Background} from "./component/Background"
@@ -16,7 +18,9 @@ const App = () => {
       <WhatWeProvide/>
       <Background/>
       <ExploreOurProperties/>
+   
       </main>
+ 
       <Footer/>
     </>
   )

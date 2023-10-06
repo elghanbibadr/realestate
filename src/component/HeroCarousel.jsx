@@ -1,44 +1,37 @@
-import { Carousel } from "@material-tailwind/react";
- import carouselImage1 from "../assets/modern-bedroom-suite-hotel1.png"
-export function HeroCarousel() {
+import carouselImage1 from "../assets/modern-bedroom-suite-hotel1.png"
+export const HeroCarousel = () => {
   return (
-    <Carousel
-      className="rounded-xl h-[490px]  relative left-6  overflow-hidden"
-      navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className="absolute  bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-          {new Array(length).fill("").map((_, i) => (
-            <span
-              key={i}
-              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-12 bg-darkBlue" : "w-12 bg-white/50"
-              }`}
-              onClick={() => setActiveIndex(i)}
-            />
-          ))}
-        </div>
-      )}
-    >
-      <img
-      src={carouselImage1}
-      
-        alt="image 1"
-        className="h-full w-full object-contain"
-      />
-      <img
-        src={carouselImage1}
-        alt="image 2"
-        className="h-full w-full object-contain"
-      />
-      <img
-        src={carouselImage1}
-        alt="image 3"
-        className="h-full w-full object-contain"
-      />
-      <img
-        src={carouselImage1}
-        alt="image 3"
-        className="h-full w-full object-contain"
-      />
-    </Carousel>
-  );
+   
+<div className="carousel w-[80%]">
+<div id="slide1" className="carousel-item relative w-full">
+  <img src={carouselImage1} className="w-full" />
+  <div className="absolute  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+    <a href="#slide4" className="btn bg-white btn-circle">❮</a> 
+    <a href="#slide2" className="btn bg-white btn-circle">❯</a>
+  </div>
+</div> 
+<div id="slide2" className="carousel-item relative w-full">
+  <img src={carouselImage1} className="w-full" />
+  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+    <a href="#slide1" className="btn bg-white  btn-circle">❮</a> 
+    <a href="#slide3" className="btn bg-white btn-circle">❯</a>
+  </div>
+</div> 
+<div id="slide3" className="carousel-item relative w-full">
+  <img src={carouselImage1} className="w-full" />
+  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+    <a href="#slide2" className="btn bg-white btn-circle">❮</a> 
+    <a href="#slide4" className="btn bg-white btn-circle">❯</a>
+  </div>
+</div> 
+<div id="slide4" className="carousel-item relative w-full">
+  <img src={carouselImage1} className="w-full" />
+  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+    <a href="#slide3" className="btn bg-white btn-circle">❮</a> 
+    <a href="#slide1" className="btn bg-white btn-circle">❯</a>
+  </div>
+</div>
+</div>
+  )
 }
+
