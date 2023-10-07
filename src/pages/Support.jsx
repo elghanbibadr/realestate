@@ -5,7 +5,7 @@ import Label from "../component/UI/Label"
 import { Input } from "../component/UI/Input"
 export const Support = () => {
   return (
-    <div className="grid support grid-cols-2">
+    <div className="grid support grid-cols-2 mt-10 p-4">
     
     <div className="dinNextLtBold">
      <h5 className="cyanTitle">الدعم</h5>
@@ -14,12 +14,19 @@ export const Support = () => {
      <form >
        <Label text='الاسم' />
        <Input placeholder="أدخل" />
-
+       <Label text="الايميل" />
+       <Input type="email" placeholder="أدخل" />
+       <Label text="رقم الجوال"/>
+       <Input  placeholder="أدخل" />
+       <Label text="  ملاحظتك"/>
+       <Input className="pb-20 pt-4" placeholder="أدخل" />
+       <button className="btn block mt-5 text-white bg-darkBlue w-full max-w-xs">ارسل</button>
      </form>
     </div>
     <div>
         <img src={suppoerHeaderBg} alt="support page hero bg" />
     </div>
+  
   </div>
   )
 }

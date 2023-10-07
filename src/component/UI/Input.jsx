@@ -1,7 +1,6 @@
-import React from 'react'
 
-export const Input = ({placeholder}) => {
+export const Input = ({placeholder,type="text",className}) => {
   return (
-    <input type="text" placeholder={placeholder} className="input outline-none input-bordered border-white  bg-white w-full max-w-xs placeholder-darkBlue" />
+    <input type={type}  placeholder={placeholder} className={`input outline-none ${className}   input-  border-white  bg-white w-full max-w-xs placeholder-darkBlue`} />
     )
 }
