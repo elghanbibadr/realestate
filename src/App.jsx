@@ -1,6 +1,7 @@
 import Navbar from "./component/Navbar"
 import { Home } from "./pages/Home";
 import { Support } from "./pages/Support"
+import { Conditions } from "./pages/Conditions";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import {  Routes, Route } from "react-router-dom";
 
@@ -13,6 +14,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
+        <Route path="conditions" element={<Conditions />} />
         {/* <Route path="pricing" element={<Pricing />} />
         <Route path="login" element={<Login />} /> */}
       </Routes>
