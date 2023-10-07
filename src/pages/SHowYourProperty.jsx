@@ -14,7 +14,7 @@ export const SHowYourProperty = () => {
      <form >
      
        <Label text="رقم الجوال"/>
-       <Input className="border-darkBlue "  placeholder="0550505055"  />
+       <Input className="border-darkBlue appearance-none hover:appearance-none focus:appearance-none" type="number"  placeholder="0550505055"  />
       
        <button className="btn block mt-5 text-white bg-darkBlue w-full max-w-xs">   تسجيل</button>
      </form>
