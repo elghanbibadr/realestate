@@ -1,6 +1,10 @@
+import Footer from "../component/Footer"
+import { Callout } from "../component/Callout"
 
 export const PrivacyPolicy = () => {
   return (
+
+    <>
     <div className="text-right p-4 mt-10">
         <h5 className=" cyanTitle ">           سياسة الخصوصية  </h5>
         <h3 className=" dinNextLtBold text-[40px]">سياسة الخصوصية</h3>
@@ -730,5 +734,9 @@ export const PrivacyPolicy = () => {
 
         </p>
     </div>
+     <Callout />
+     <Footer/>
+    
+    </>
   )
 }

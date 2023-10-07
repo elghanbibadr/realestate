@@ -15,8 +15,8 @@ export const Home = () => {
     <WhatWeProvide/>
     <Background/>
     <ExploreOurProperties/>
-    <Callout />
     </main>
+    <Callout />
     <Footer/>
     </>
   )
