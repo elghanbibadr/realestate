@@ -76,3 +76,16 @@ footer li{
 footer{
   direction: rtl;
 }
+
+
+
+/* INPUTS STYLING */
+
+select {
+  direction:rtl !important;
+}
+select ,  input{
+  font-family: 'DINNextLT-regular' ,sans-serif !important;
+  /* font-size: 18px !important; */
+
+}
