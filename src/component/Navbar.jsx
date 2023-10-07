@@ -2,10 +2,14 @@ import En from "../assets/En.png"
 import Menu from "../assets/Menu.png"
 import logo from "../assets/logo.png"
 import icon from "../assets/icon-house.png"
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
+  const [navOpen ,setNavOpen]=useState(false)
+
   return (
-    <header className="p-4 bg-white">
+    <header className="p-4 bg-white ">
     <nav className="flex justify-between ">
     <ul className="text-darkBlue w-[40%] flex items-center justify-between font-bold text-[16px]">
         <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light"> <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" /> <button className="">اعرض عقارك</button> </li>
@@ -17,9 +21,15 @@ const Navbar = () => {
     </ul>
     <div className="flex  items-center">
          <img className="h-10 mr-6" src={logo} alt="soum logo" />
-        <img className="h-6" src={Menu} alt="hamburger menu" />
+        <img onClick={() => setNavOpen(true)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
     </div>
     </nav>
+  {navOpen &&   <ul className=" absolute bg-darkBlue p-20 text-white text-[48px] text-right  h-full w-full inset-0 ">
+      <li className="cursor-pointer  hover:text-cyan">الدعم</li>
+      <li className="cursor-pointer  hover:text-cyan">سياسة الخصوصية</li>
+      <li className="cursor-pointer  hover:text-cyan">الشروط و الأحكام</li>
+      <li className="cursor-pointer  hover:text-cyan">أسئلة شائعة</li>
+    </ul>}
     </header>
   )
 }
