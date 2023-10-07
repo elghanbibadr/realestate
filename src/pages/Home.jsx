@@ -4,6 +4,7 @@ import { WhatWeProvide } from "../component/WhatWeProvide"
 import {Background} from "../component/Background"
 import {ExploreOurProperties} from "../component/ExploreOurProperties"
 import Footer from "../component/Footer"
+import { Callout } from "../component/Callout"
 
 export const Home = () => {
   return (
@@ -14,6 +15,7 @@ export const Home = () => {
     <WhatWeProvide/>
     <Background/>
     <ExploreOurProperties/>
+    <Callout />
     </main>
     <Footer/>
     </>

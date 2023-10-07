@@ -6,7 +6,7 @@ import whatsapp from "../assets/whatsapp.png"
 import line from "../assets/line 1.png"
 const Footer = () => {
   return (
-    <footer className="bg-darkBlue text-right  mt-10 p-4 pt-24">
+    <footer className="bg-darkBlue text-right   p-4 pt-24">
       <div className=" flex  justify-evenly w-1/2 ">
       <div>
           <img src={logoWhite} alt="soum white logo" />
