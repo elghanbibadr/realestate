@@ -24,8 +24,10 @@ const Navbar = () => {
         <img onClick={() => setNavOpen(true)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
     </div>
     </nav>
-  {navOpen &&   <ul className=" absolute bg-darkBlue p-20 text-white text-[48px] text-right  h-full w-full inset-0 ">
-      <li className="cursor-pointer  hover:text-cyan">الدعم</li>
+  {navOpen &&   <ul className=" absolute  z-10 bg-darkBlue p-20 text-white text-[48px] text-right  h-full w-full inset-0 ">
+      <Link to="/support" onClick={() => setNavOpen(false)}>
+        <li className="cursor-pointer  hover:text-cyan">الدعم</li>
+      </Link>
       <li className="cursor-pointer  hover:text-cyan">سياسة الخصوصية</li>
       <li className="cursor-pointer  hover:text-cyan">الشروط و الأحكام</li>
       <li className="cursor-pointer  hover:text-cyan">أسئلة شائعة</li>

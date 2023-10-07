@@ -1,6 +1,9 @@
 import Hero from "../component/Hero"
 import { WhyUs } from "../component/WhyUs"
 import { WhatWeProvide } from "../component/WhatWeProvide"
+import {Background} from "../component/Background"
+import {ExploreOurProperties} from "../component/ExploreOurProperties"
+import Footer from "../component/Footer"
 
 export const Home = () => {
   return (
@@ -11,10 +14,7 @@ export const Home = () => {
     <WhatWeProvide/>
     <Background/>
     <ExploreOurProperties/>
-
- 
     </main>
-
     <Footer/>
     </>
   )
