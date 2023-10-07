@@ -12,7 +12,6 @@ const App = () => {
     <>
     
       <Navbar/>
-      <Select text="hello"/>
 
     <main className="max-w-[1400px] mx-auto">
       <Hero/>

@@ -1,6 +1,7 @@
 
   import setting from "../assets/setting-4.svg"
-   
+import Label from "./UI/Label";   
+import Select from "./UI/Select";
 
   export function FilterProperties() {
 
@@ -22,10 +23,10 @@
               </div>
            </div>
                    <div className="p-0 mt-6">
-                   <p className="text-[16px]  mb-2 text-darkBlue dinNextLtBold">المنطقة</p>
-           {/* <SelectOptions/> */}
-                   <p className="text-[16px] mb-2 mt-6 text-darkBlue dinNextLtBold">الحي</p>
-           {/* <SelectOptions/> */}
+                    <Label text="المنطقة" />
+                    <Select/>
+                    <Label text="الحي" />
+                    <Select/>
             <div className="mb-2 flex mt-4 items-center flex-row-reverse">
               <img src={setting} alt="setting icon" />
               <p className="text-[16px] mx-2  text-darkBlue dinNextLtRegular">  بحت متقدم </p>
