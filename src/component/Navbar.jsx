@@ -28,7 +28,9 @@ const Navbar = () => {
       <Link to="/support" onClick={() => setNavOpen(false)}>
         <li className="cursor-pointer  hover:text-cyan">الدعم</li>
       </Link>
-      <li className="cursor-pointer  hover:text-cyan">سياسة الخصوصية</li>
+      <Link to="/privacyPolicy" onClick={() => setNavOpen(false)}>
+        <li className="cursor-pointer  hover:text-cyan">سياسة الخصوصية</li>
+      </Link>
       <li className="cursor-pointer  hover:text-cyan">الشروط و الأحكام</li>
       <li className="cursor-pointer  hover:text-cyan">أسئلة شائعة</li>
     </ul>}

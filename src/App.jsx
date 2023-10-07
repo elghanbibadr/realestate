@@ -10,7 +10,8 @@ const App = () => {
     {/* <AppLayout /> */}
     <Navbar />
       <Routes>
-        <Route index element={<PrivacyPolicy />} />
+        <Route index element={<Home />} />
+        <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         {/* <Route path="pricing" element={<Pricing />} />
         <Route path="login" element={<Login />} /> */}
