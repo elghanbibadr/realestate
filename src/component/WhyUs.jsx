@@ -2,7 +2,7 @@
 export  const WhyUs = () => {
   return (
     <div className="text-right p-4 mt-20">
-         <h5 className="text-cyan dinNextLtBold text-[24px]">ايش يميزنا</h5>
+         <h5 className=" cyanTitle ">ايش يميزنا</h5>
         <h2 className=" dinNextLtBold text-[48px]">ليش تختار عقارك عن طريقنا؟</h2>
         <div className="grid grid-cols-3 mt-10 px-10 gap-4">
         {/* </svg> */}

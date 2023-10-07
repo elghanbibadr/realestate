@@ -36,7 +36,7 @@ nav ul button {
 }
 
 
-.dinNextLtBold{
+.dinNextLtBold,.cyanTitle{
   font-family: 'DINNextLT-bold' ,sans-serif !important;
 }
 /* .dinNextLt{
@@ -79,13 +79,23 @@ footer{
 
 
 
+/* Resuable classes */
+
+.support{
+  direction: rtl;
+}
+.cyanTitle{
+  color: #0071F2;
+  font-size: 24px;
+}
 /* INPUTS STYLING */
 
 select {
   direction:rtl !important;
 }
-select ,  input{
+select ,input{
   font-family: 'DINNextLT-regular' ,sans-serif !important;
   /* font-size: 18px !important; */
 
 }
+
