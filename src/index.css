@@ -110,3 +110,8 @@ select ,input{
 body{
   position: relative;
 }
+
+
+img{
+  cursor: pointer;
+}
