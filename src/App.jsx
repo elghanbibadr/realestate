@@ -1,6 +1,7 @@
 import Navbar from "./component/Navbar"
 import { Home } from "./pages/Home";
 import { Support } from "./pages/Support"
+import { PropertyAddedSuccessuly } from "./pages/PropertyAddedSuccessuly";
 import { Properties } from "./pages/Properties";
 import { Conditions } from "./pages/Conditions";
 import { SHowYourProperty } from "./pages/SHowYourProperty";
@@ -14,7 +15,7 @@ const App = () => {
     {/* <AppLayout /> */}
     <Navbar />
       <Routes>
-        <Route index element={<AddYourProperty />} />
+        <Route index element={<PropertyAddedSuccessuly />} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />
