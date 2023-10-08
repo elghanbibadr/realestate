@@ -2,6 +2,7 @@
 import Label from "../component/UI/Label"
 import Select from "../component/UI/Select"
 import { Input } from "../component/UI/Input"
+import plusIcon from "../assets/plusIcon.png"
 import map from "../assets/map1.png"
 export const AddYourProperty = () => {
   return (
@@ -86,6 +87,32 @@ export const AddYourProperty = () => {
 حدد موقع عقارك                     </h5>
                         <Label className="dinNextLtRegular text-[22px] mt-0 " text="حدد على الخريطة لدقة اكبر" />
                   <img src={map} alt="map image" />
+                  </div>
+
+                  <div>
+                  <h5 className="cyanTitle mt-20 ">
+                  اضافة صور أو فيديو                    </h5>
+                        <Label className="dinNextLtRegular text-[22px] mt-0 " text="صور العقار "/>
+                   
+                   <div>
+                    <div className="flex gap-6 mt-6">
+                      <div className="p-10  bg-white h-fit w-fit rounded-md">
+                                        <img src={plusIcon} alt="plus icon" />
+                      </div>
+                      <div className="p-10  bg-white h-fit w-fit rounded-md">
+                                        <img src={plusIcon} alt="plus icon" />
+                      </div>
+                      <div className="p-10  bg-white h-fit w-fit rounded-md">
+                                        <img src={plusIcon} alt="plus icon" />
+                      </div>
+                      <div className="p-10  bg-white h-fit w-fit rounded-md">
+                                        <img src={plusIcon} alt="plus icon" />
+                      </div>
+                      <div className="p-10  bg-white h-fit w-fit rounded-md">
+                                        <img src={plusIcon} alt="plus icon" />
+                      </div>
+                    </div>
+                   </div>
                   </div>
 
                 </div>
