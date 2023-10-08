@@ -89,6 +89,10 @@ footer{
   color: #0071F2;
   font-size: 24px;
 }
+
+.rightDir{
+  direction: rtl !important;
+}
 /* INPUTS STYLING */
 
 

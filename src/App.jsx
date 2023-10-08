@@ -5,6 +5,7 @@ import { Properties } from "./pages/Properties";
 import { Conditions } from "./pages/Conditions";
 import { SHowYourProperty } from "./pages/SHowYourProperty";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { AddYourProperty } from "./pages/AddYourProperty";
 import {  Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
     {/* <AppLayout /> */}
     <Navbar />
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<AddYourProperty />} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />
