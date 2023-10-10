@@ -7,15 +7,16 @@ import { Conditions } from "./pages/Conditions";
 import { SHowYourProperty } from "./pages/SHowYourProperty";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { AddYourProperty } from "./pages/AddYourProperty";
+import { NavadPage } from "./pages/NavadPage";
 import {  Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <>
     {/* <AppLayout /> */}
-    <Navbar />
+    {/* <Navbar /> */}
       <Routes>
-        <Route index element={<PropertyAddedSuccessuly />} />
+        <Route index element={<NavadPage />} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />

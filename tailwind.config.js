@@ -79,6 +79,7 @@ export default {
               cyan: "#0071F2",
               textColor: "#6E7681",
               lightGray: "#A7A7A7",
+              darkGreen :"#11998E"
             },
     },
   },
