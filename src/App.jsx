@@ -4,6 +4,7 @@ import { Support } from "./pages/Support"
 import { PropertyAddedSuccessuly } from "./pages/PropertyAddedSuccessuly";
 import { Properties } from "./pages/Properties";
 import { Conditions } from "./pages/Conditions";
+import Map from "./pages/Map";
 import { SHowYourProperty } from "./pages/SHowYourProperty";
 // import { SHowYourProperty } from "./pages/SHowYourProperty";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
@@ -17,7 +18,7 @@ const App = () => {
     {/* <AppLayout /> */}
     <Navbar />
       <Routes>
-        <Route index element={<Properties/>} />
+        <Route index element={<Map/>} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />
