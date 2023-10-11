@@ -5,7 +5,8 @@ import { PropertyAddedSuccessuly } from "./pages/PropertyAddedSuccessuly";
 import { Properties } from "./pages/Properties";
 import { Conditions } from "./pages/Conditions";
 import Map from "./pages/Map";
-import { SHowYourProperty } from "./pages/SHowYourProperty";
+import { Loggin } from "./pages/SHowYourProperty";
+// import { SHowYourProperty } from "./pages/SHowYourProperty";
 // import { SHowYourProperty } from "./pages/SHowYourProperty";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { AddYourProperty } from "./pages/AddYourProperty";
@@ -18,14 +19,15 @@ const App = () => {
     {/* <AppLayout /> */}
     <Navbar />
       <Routes>
-        <Route index element={<Map/>} />
+        <Route index element={<Home/>} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />
-        <Route path="showyourproperty" element={<SHowYourProperty/>} />
+        <Route path="login" element={<Loggin/>} />
         <Route path="properties" element={<Properties/>} />
-        {/* <Route path="pricing" element={<Pricing />} />
-        <Route path="login" element={<Login />} /> */}
+        <Route path="navad" element={<NavadPage/>} />
+        <Route path="map" element={<Map/>} />
+        
       </Routes>
   </>
   )

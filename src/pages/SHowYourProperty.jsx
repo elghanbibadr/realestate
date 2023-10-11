@@ -1,10 +1,11 @@
-
-
 import suppoerHeaderBg from "../assets/supportHeader.png"
 import Label from "../component/UI/Label"
 import { Input } from "../component/UI/Input"
 import { useState } from "react"
-export const SHowYourProperty = () => {
+import { Link } from "react-router-dom"
+
+
+export const Loggin = () => {
   const [userLoggedIn,setIsUserLoggedIn] =useState(false)
 
 
@@ -33,7 +34,7 @@ export const SHowYourProperty = () => {
       
 {  !userLoggedIn &&      <button className="btn block mt-5 text-white bg-darkBlue w-full max-w-xs hover:bg-darkBlue">   تسجيل</button>
 }
-{   userLoggedIn &&     <button className="btn block mt-5 bg-darkGreen text-white w-full btn-accent max-w-xs hover:bg-darkGreen"> توثيق عن طريق نفاد </button>
+{   userLoggedIn &&     <Link to="/navad"><button className="btn block mt-5 bg-darkGreen text-white w-full btn-accent max-w-xs hover:bg-darkGreen"> توثيق عن طريق نفاد </button></Link>
 }
      </form>
     </div>

@@ -1,6 +1,7 @@
 import En from "../assets/En.png"
 import Menu from "../assets/Menu.png"
 import logo from "../assets/logo.png"
+import { NavLink } from "react-router-dom"
 import icon from "../assets/icon-house.png"
 import { useState } from "react"
 import { Link } from "react-router-dom"
@@ -12,12 +13,24 @@ const Navbar = () => {
     <header className="p-4 bg-white ">
     <nav className="flex justify-between ">
     <ul className="text-darkBlue w-[40%] flex items-center justify-between font-bold text-[16px]">
-        <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light"> <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" /> <Link to="/showyourproperty"><button className="">اعرض عقارك</button></Link> </li>
-        <li className="text-darkBlue">تسجيل دخول </li>
-        <li> <img className="h-10" src={En} alt="change language icon" /> </li>
-        <li>الخريطة</li>
-        <li>العقارات</li>
-        <li>الرئيسية</li>
+        <Link>
+          <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light"> <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" /> <Link to="/showyourproperty"><button className="">اعرض عقارك</button></Link> </li>
+        </Link>
+        <Link to="login">
+          <li className="text-darkBlue">تسجيل دخول </li>
+        </Link>
+        <Link >
+          <li> <img className="h-10" src={En} alt="change language icon" /> </li>
+        </Link>
+        <Link to="/map">
+          <li>الخريطة</li>
+        </Link>
+        <Link to="/properties">
+          <li>العقارات</li>
+        </Link>
+        <NavLink to="/">
+        الرئيسية
+        </NavLink>
     </ul>
     <div className="flex  items-center">
          <img className="h-10 mr-6" src={logo} alt="soum logo" />

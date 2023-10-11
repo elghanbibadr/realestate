@@ -1,7 +1,7 @@
-import React from 'react'
 import Navadvision from "../assets/vision.png"
 import Navad from "../assets/nafad.png"
 import globe from "../assets/globe.svg"
+import { Link } from "react-router-dom"
 import { Input } from '../component/UI/Input'
 import Label from '../component/UI/Label'
 import nic from "../assets/nic.png"
@@ -43,7 +43,7 @@ export const NavadPage = () => {
                 <div className='text-right'>
                  <p className='text-textColor font-semibold  text-[15px]'> رقم بطاقة الأحوال/الاقامة </p>
                  <input type="text" placeholder="ادخل رقم بطاقة الأحوال/الاقامة" className="input input-bordered input-accent border-darkGreen placeholder:opacity-30 w-full my-3 text-right mb-6" />
-                 <button className="btn bg-darkGreen text-white w-full btn-accent"> تسجيل الدخول </button>
+                 <Link to="/properties" ><button className="btn bg-darkGreen text-white w-full btn-accent hover:bg-darkGreen"> تسجيل الدخول </button></Link>
                  <p className='text-textColor dinNextLtRegular font-semibold  text-[15px] text-center mt-6'>لتحميل تطبيق نفاد</p>
                  <div className='grid grid-cols-3 gap-4   mt-4'>
                     <img className=' h-[80%] object-fill  w-full' src={availableonappgallery} alt="app gallery logo" />
@@ -72,7 +72,9 @@ export const NavadPage = () => {
           </div>
             </div>
             <ul className='flex items-center justify-between w-[40%] text-textColor dinNextLtRegular font-semibold text-center  text-[15px]'>
-             <li>الرئيسية</li>
+             <Link to="/">
+                 <li>الرئيسية</li>
+             </Link>
              <li> حول</li>
              <li> اتصل بنا</li>
              <li> الشروط والأحكام</li>

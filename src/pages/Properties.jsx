@@ -9,8 +9,8 @@ export const Properties = () => {
     <div>
         <div className="text-center mt-20 ">
             <h1 className="text-[60px] text-lightBlueDark ">عقارات متوفرة في النرجس</h1>
-            <h2 className="text-[34px] dinNextLtRegular text-darkBlue  ">  303 عقار معروض للبيع </h2>
-            <div className="mt-10 w-fit relative flex mx-auto">
+            <h2 className="text-[34px] dinNextLtRegular text-darkBlue">&#x200F;303 عقار معروض للبيع</h2>
+             <div className="mt-10 w-fit relative flex mx-auto">
                 <img className="h-12" src={filterIcon} alt="filter icon" />
             <Input className="text-right  filterProprtyInput  pl-14 pr-6  mx-3 border-white dinNextLtRegular" placeholder="حي النرجس، الرياض " />
 
