@@ -28,6 +28,8 @@ export const Properties = () => {
          <img src={group1} alt="property group 1 image" />
          <img src={group2} alt="property group 1 image" />
         </div>
+
+
     </div>
   )
 }

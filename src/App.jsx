@@ -5,7 +5,7 @@ import { PropertyAddedSuccessuly } from "./pages/PropertyAddedSuccessuly";
 import { Properties } from "./pages/Properties";
 import { Conditions } from "./pages/Conditions";
 import Map from "./pages/Map";
-import { Loggin } from "./pages/SHowYourProperty";
+import { Loggin } from "./pages/Loggin";
 // import { SHowYourProperty } from "./pages/SHowYourProperty";
 // import { SHowYourProperty } from "./pages/SHowYourProperty";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
@@ -25,6 +25,8 @@ const App = () => {
         <Route path="conditions" element={<Conditions />} />
         <Route path="login" element={<Loggin/>} />
         <Route path="properties" element={<Properties/>} />
+        <Route path="addyourproperties" element={<AddYourProperty/>} />
+        <Route path="propertyaddedsuccessfuly" element={<PropertyAddedSuccessuly/>} />
         <Route path="navad" element={<NavadPage/>} />
         <Route path="map" element={<Map/>} />
         

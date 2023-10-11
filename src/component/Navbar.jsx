@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="flex justify-between ">
     <ul className="text-darkBlue w-[40%] flex items-center justify-between font-bold text-[16px]">
         <Link>
-          <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light"> <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" /> <Link to="/showyourproperty"><button className="">اعرض عقارك</button></Link> </li>
+          <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light"> <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" /> <Link to="/addyourproperties"><button >اعرض عقارك</button></Link> </li>
         </Link>
         <Link to="login">
           <li className="text-darkBlue">تسجيل دخول </li>

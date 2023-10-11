@@ -4,7 +4,7 @@ export const PropertyAddedSuccessuly = () => {
   return (
     <div>
 
-<div className="dinNextLtBold p-4 mt-20 pr-10 rightDir">
+<div className="dinNextLtBold p-4 mt-6 pr-10 rightDir">
        <h5 className="cyanTitle text-[24px]">اعرض عقارك   </h5>
          <h3 className=" text-darkBlue text-[40px]" >ابدا بيع عقارك   </h3>
          <h4 className="dinNextLtRegular text-darkBlue">  بكل سهولة، وفريقنا بيكون معك بكل خطوة!  </h4>
