@@ -34,7 +34,7 @@ const Navbar = () => {
           </NavLink>
         </ul>
         <div className="flex  items-center">
-          <img className="h-10 mr-6" src={logo} alt="soum logo" />
+          <Link to="/"><img className="h-10 mr-6" src={logo} alt="soum logo" /></Link>
           <img onClick={() => setNavOpen(true)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
         </div>
       </nav>

@@ -4,6 +4,8 @@ import instagram from "../assets/instagram.png"
 import tiktok from "../assets/tik_tok.png"
 import whatsapp from "../assets/whatsapp.png"
 import line from "../assets/line 1.png"
+import { Link } from "react-router-dom"
+
 const Footer = () => {
   return (
     <footer className="bg-darkBlue text-right   p-4 pt-24">
@@ -23,9 +25,15 @@ const Footer = () => {
           </div>
           <ul className="footerPageLink">
               <h6 className="text-white text-[20px]">الروابط</h6>
-              <li>الرئيسية</li>
-              <li>الشروط والاحكام</li>
-              <li>سياسة الخصوصية</li>
+              <Link t="/">
+                <li>الرئيسية</li>
+              </Link>
+              <Link to="/conditions">
+                <li>الشروط والاحكام</li>
+              </Link>
+              <Link to="/privacyPolicy">
+                <li>سياسة الخصوصية</li>
+              </Link>
               <li>الأسئلة الشائعة</li>
           </ul>
           
