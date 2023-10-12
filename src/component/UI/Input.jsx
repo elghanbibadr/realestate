@@ -4,7 +4,7 @@ export const Input = ({placeholder,type="text",className}) => {
   return (
 
     <>
-    <input type={type}  placeholder={placeholder} className={`input  relative outline-none       bg-white  max-w-xs placeholder-darkBlue w-full ${className}  `} />
+    <input type={type}  placeholder={placeholder} className={`input  relative outline-none       bg-white  max-w-xs placeholder-darkBlue w-full ${className} border-white  `} />
     {/* <img className="absolute right-2" src={pen} alt='pen icon' /> */}
     </>
     )

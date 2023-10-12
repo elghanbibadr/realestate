@@ -13,7 +13,7 @@ import Select from "./UI/Select";
               <li className="text-darkBlue dinNextLtRegular border-darkBlue py-4 px-10 border-b-2 cursor-pointer"> للشراء </li>  
            
             </ul>
-         <div className="p-4 px-10">
+         <div className="p-4 ">
            <div className="text-darkBlue dinNextLtBold ">
               <p className="text-[16px] mb-2">نوع العقار</p>
               <div className="flex cursor-pointer text-[14px] justify-evenly  rounded-md mx-auto  bg-white flex-row-reverse">
