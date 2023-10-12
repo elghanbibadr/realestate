@@ -1,56 +1,57 @@
-import En from "../assets/En.png"
-import Menu from "../assets/Menu.png"
-import logo from "../assets/logo.png"
-import { NavLink } from "react-router-dom"
-import icon from "../assets/icon-house.png"
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import En from "../assets/En.png";
+import Menu from "../assets/Menu.png";
+import logo from "../assets/logo.png";
+import icon from "../assets/icon-house.png";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [navOpen ,setNavOpen]=useState(false)
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className="p-4 bg-white ">
-    <nav className="flex justify-between ">
-    <ul className="text-darkBlue w-[40%] flex items-center justify-between font-bold text-[16px]">
-        <Link>
-          <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light"> <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" /> <Link to="/addyourproperties"><button >اعرض عقارك</button></Link> </li>
-        </Link>
-        <Link to="login">
-          <li className="text-darkBlue">تسجيل دخول </li>
-        </Link>
-        <Link >
+    <header className="p-4 bg-white">
+      <nav className="flex justify-between">
+        <ul className="text-darkBlue w-[40%] flex items-center justify-between font-bold text-[16px]">
+          <li className="bg-darkBlue text-white flex items-center py-2 px-4 rounded-full font-light">
+            <img className="h-5 w-5 mr-2" src={icon} alt="icon-house" />
+            <NavLink to="/addyourproperties"  activeClassName="active">
+              <button>اعرض عقارك</button>
+            </NavLink>
+          </li>
+          <NavLink to="login" className="nav-link" activeClassName="active">
+            <li className="text-darkBlue">تسجيل دخول</li>
+          </NavLink>
           <li> <img className="h-10" src={En} alt="change language icon" /> </li>
+          <NavLink to="/map" className="nav-link" activeClassName="active">
+            <li>الخريطة</li>
+          </NavLink>
+          <NavLink to="/properties" className="nav-link" activeClassName="active">
+            <li>العقارات</li>
+          </NavLink>
+          <NavLink to="/" exact className="nav-link" activeClassName="active">
+            الرئيسية
+          </NavLink>
+        </ul>
+        <div className="flex  items-center">
+          <img className="h-10 mr-6" src={logo} alt="soum logo" />
+          <img onClick={() => setNavOpen(true)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
+        </div>
+      </nav>
+      {navOpen && <ul className="absolute z-10 bg-darkBlue p-20 text-white text-[48px] text-right h-full w-full inset-0">
+        <Link to="/support" onClick={() => setNavOpen(false)}>
+          <li className="cursor-pointer hover:text-cyan">الدعم</li>
         </Link>
-        <Link to="/map">
-          <li>الخريطة</li>
+        <Link to="/privacyPolicy" onClick={() => setNavOpen(false)}>
+          <li className="cursor-pointer hover:text-cyan">سياسة الخصوصية</li>
         </Link>
-        <Link to="/properties">
-          <li>العقارات</li>
+        <Link to="/conditions" onClick={() => setNavOpen(false)}>
+          <li className="cursor-pointer hover:text-cyan">الشروط و الأحكام</li>
         </Link>
-        <NavLink to="/">
-        الرئيسية
-        </NavLink>
-    </ul>
-    <div className="flex  items-center">
-         <img className="h-10 mr-6" src={logo} alt="soum logo" />
-        <img onClick={() => setNavOpen(true)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
-    </div>
-    </nav>
-  {navOpen &&   <ul className=" absolute  z-10 bg-darkBlue p-20 text-white text-[48px] text-right  h-full w-full inset-0 ">
-      <Link to="/support" onClick={() => setNavOpen(false)}>
-        <li className="cursor-pointer  hover:text-cyan">الدعم</li>
-      </Link>
-      <Link to="/privacyPolicy" onClick={() => setNavOpen(false)}>
-        <li className="cursor-pointer  hover:text-cyan">سياسة الخصوصية</li>
-      </Link>
-      <Link to="/conditions" onClick={() => setNavOpen(false)}>
-        <li className="cursor-pointer  hover:text-cyan">الشروط و الأحكام</li>
-      </Link>
-      <li className="cursor-pointer  hover:text-cyan">أسئلة شائعة</li>
-    </ul>}
+        <li className="cursor-pointer hover:text-cyan">أسئلة شائعة</li>
+      </ul>}
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
