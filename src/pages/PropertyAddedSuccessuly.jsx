@@ -1,5 +1,5 @@
-import React from 'react'
 import propertyAddedImage from "../assets/propertyAdded.png"
+
 export const PropertyAddedSuccessuly = () => {
   return (
     <div>
