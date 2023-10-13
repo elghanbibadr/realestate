@@ -35,10 +35,10 @@ const Navbar = () => {
         </ul>
         <div className="flex  items-center">
           <Link to="/"><img className="h-10 mr-6" src={logo} alt="soum logo" /></Link>
-          <img onClick={() => setNavOpen(true)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
+          <img onClick={() => setNavOpen(prv => !prv)} className="h-6 cursor-pointer" src={Menu} alt="hamburger menu" />
         </div>
       </nav>
-      {navOpen && <ul className="absolute z-10 bg-darkBlue p-20 text-white text-[48px] text-right h-full w-full inset-0">
+      {navOpen && <ul className="absolute z-10 bg-darkBlue p-20 text-white text-[48px] text-right  w-full left-0 right-0  bottom-0 top-[4.8rem]">
         <Link to="/support" onClick={() => setNavOpen(false)}>
           <li className="cursor-pointer hover:text-cyan">الدعم</li>
         </Link>
