@@ -20,7 +20,7 @@ export const Support = () => {
        <Input  placeholder="أدخل" />
        <Label text="  ملاحظتك"/>
        <Input className="pb-20 pt-4" placeholder="أدخل" />
-       <button className="btn block mt-5 text-white bg-darkBlue w-full max-w-xs">ارسل</button>
+       <button className="btn block mt-5 text-white bg-darkBlue w-full max-w-xs hover:bg-darkBlue">ارسل</button>
      </form>
     </div>
     <div>
