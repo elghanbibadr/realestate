@@ -26,14 +26,14 @@ const App = () => {
       {/* <Suspense> */}
       {isNavadPage ? null : <Navbar />}
         <Routes>
-          <Route index element={<SupportRequestSendSuccessfuly/>} />
+          <Route index element={<Home/>} />
           <Route path="privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="support" element={<Support />} />
           <Route path="conditions" element={<Conditions />} />
           <Route path="login" element={<Loggin />} />
           <Route path="properties" element={<Properties />} />
           <Route path="addyourproperties" element={<AddYourProperty />} />
-          <Route path="propertyaddedsuccessfuly" element={<PropertyAddedSuccessuly />} />
+          <Route path="supportrequestsend" element={<SupportRequestSendSuccessfuly />} />
           <Route path="navad" element={<NavadPage />} />
           <Route path="map" element={<Map />} />
         </Routes>
