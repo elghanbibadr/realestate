@@ -8,7 +8,7 @@
 /* TYPOGRAPHY */
 @font-face {
   font-family: 'sst arabic bold';
-  src: url('fonts/sstArabic/alfont_com_AlFont_com_SST-Arabic-Bold-1.ttf') format('truetype');
+  src: url('fonts/sstArabic/sst-arabic-bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'DINNextLT-Medium';
