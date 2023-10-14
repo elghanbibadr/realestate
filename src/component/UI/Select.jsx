@@ -4,7 +4,7 @@ import arrow from "../../assets/arrow-right.png"
 const Select = ({options}) => {
 
   return (
-    <div className="relative  ">
+    <div className="relative  w-[300px] ">
       <select className="select bg-none select-bordered bg-white px-4 border-white w-full max-w-xs appearance-none py-2 pl-8 pr-2">
         <option disabled selected>
         اختر
