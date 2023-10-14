@@ -3,10 +3,17 @@ import Label from "../component/UI/Label"
 import Select from "../component/UI/Select"
 import { Input } from "../component/UI/Input"
 import plusIcon from "../assets/plusIcon.png"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import map from "../assets/map1.png"
 
 export const AddYourProperty = () => {
+  const [selectedSpan, setSelectedSpan] = useState(null);
+
+  const handleClick = (index) => {
+    setSelectedSpan(index);
+  };
+
   return (
     <div className="text-right  mt-10">
    <div className="dinNextLtBold p-4">
@@ -18,27 +25,32 @@ export const AddYourProperty = () => {
    <div>
    <div className="text-darkBlue p-4 pr-20 mt-20 bg-[#EDF2F7]  ">
              <Label className="dinNextLtRegular text-[22px]" text="نوع العقار " />
-              <div className=" dinNextLtBold cursor-pointer mt-6  text-[14px]   ">
-                  <span className="px-12  border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md "> شقة</span>
-                  <span className="px-12 mx-4 border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md "> دبلكس</span>
-                  <span className="px-12 mx-4 border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md ">  فيلا</span>
-                  <span className="px-12 mx-4 border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md "> أرض</span>
+              <div className=" dinNextLtBold  cursor-pointer mt-6  text-[14px]   ">
+                  <span onClick={() => handleClick(0)} className={`px-14  border-x py-2  ${selectedSpan === 0 ? "bg-darkBlue rounded-md text-white" : "bg-white"}  border-1 border-[#cccccc44]  rounded-md` }> شقة</span>
+                  <span onClick={() => handleClick(1)} className={`px-14   border-x py-2 mx-4  ${selectedSpan === 1 ? "bg-darkBlue rounded-md text-white" : "bg-white"}  border-1 border-[#cccccc44]  rounded-md` }>  دبلكس   </span>
+                  <span onClick={() => handleClick(2)} className={`px-14  border-x py-2 mx-4 ${selectedSpan === 2 ? "bg-darkBlue rounded-md text-white" : "bg-white"}  border-1 border-[#cccccc44]  rounded-md` }> فيلا </span>
+                  <span onClick={() => handleClick(3)} className={`px-14  border-x py-2  ${selectedSpan === 3 ? "bg-darkBlue rounded-md text-white" : "bg-white"}  border-1 border-[#cccccc44]  rounded-md` }>  أرض </span>
+                  {/* <span className="px-12 mx-4 border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md ">  دبلكس   </span>
+                  <span className="px-12 mx-4 border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md ">  فيلا < /span>
+                  <span className="px-12 mx-4 border-x py-2  border-1 border-[#cccccc44] bg-white rounded-md "> أرض </span> */}
               </div>
+                   
+     
 
               <div className="mt-12 rightDir ">
                   <h5 className="cyanTitle">الموقع</h5>
                   <div className="grid grid-cols-2 w-[60%]">
                       <div>
                       <Label className="dinNextLtRegular text-[22px]" text="الحي " />
-                       <Select  />
+                       <Select options={["اختيار 1" ,"اخيار 2","اختيار3"]}  />
                       </div>
                       <div>
                       <Label className="dinNextLtRegular text-[22px]" text="المنطقة" />
-                       <Select  />
+                       <Select  options={["اختيار 1" ,"اخيار 2","اختيار3"]} />
                       </div>
                       <div>
                       <Label className="dinNextLtRegular text-[22px]" text=" المدينة" />
-                       <Select  />
+                       <Select   options={["اختيار 1" ,"اخيار 2","اختيار3"]} />
                       </div>
                   </div>
                   <h5 className="cyanTitle mt-20">  مواصفات العقار  </h5>
