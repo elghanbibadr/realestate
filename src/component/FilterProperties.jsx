@@ -2,8 +2,14 @@
   import setting from "../assets/setting-4.svg"
 import Label from "./UI/Label";   
 import Select from "./UI/Select";
+import { useState } from "react";
 
   export function FilterProperties() {
+    const [selectedSpan, setSelectedSpan] = useState(null);
+
+    const handleClick = (index) => {
+      setSelectedSpan(index);
+    };
 
 
     return (
@@ -16,11 +22,33 @@ import Select from "./UI/Select";
          <div className="p-4 ">
            <div className="text-darkBlue dinNextLtBold ">
               <p className="text-[16px] mb-2">نوع العقار</p>
-              <div className="flex cursor-pointer text-[14px] justify-evenly  rounded-md mx-auto  bg-white flex-row-reverse">
+              {/* <div className="flex cursor-pointer text-[14px] justify-evenly  rounded-md mx-auto  bg-white flex-row-reverse">
                   <span className=" py-2">شقة</span>
                   <span className="px-6 border-x py-2  border-1 border-[#cccccc44]">  فيلا</span>
                   <span className=" py-2"> أرض</span>
-              </div>
+              </div> */}
+               <div className="flex cursor-pointer text-[14px]  rounded-md mx-auto bg-white flex-row-reverse">
+      <span
+        className={`py-2 w-full text-center px-6 ${selectedSpan === 0 ? "bg-darkBlue rounded-md text-white" : ""}`}
+        onClick={() => handleClick(0)}
+      >
+        شقة
+      </span>
+      <span
+        className={`px-6 text-center w-full border-x py-2 border-1 border-[#cccccc44] ${
+          selectedSpan === 1 ? "bg-darkBlue rounded-md  text-white" : ""
+        }`}
+        onClick={() => handleClick(1)}
+      >
+        فيلا
+      </span>
+      <span
+        className={`py-2 w-full text-center px-6 ${selectedSpan === 2 ? "bg-darkBlue rounded-md text-white" : ""}`}
+        onClick={() => handleClick(2)}
+      >
+        أرض
+      </span>
+    </div>
            </div>
                    <div className="p-0 mt-6">
                     <Label text="المنطقة" />
