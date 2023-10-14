@@ -17,21 +17,22 @@ const Footer = () => {
             <li >   تواصل معنا  على   <b className="text-cyan">Contact@SoumAqar.sa</b></li>
              </ul>
              <div className="flex items-center  mt-6 justify-between w-1/2">
-              <img src={tiktok} alt="twitter icon" />
-              <img src={whatsapp} alt="twitter icon" />
-              <img src={instagram} alt="twitter icon" />
-              <img src={twitter} alt="twitter icon" />
+              <a target="_blank" href="https://www.tiktok.com/@soumaqar?_t=8gG4hSEYDNh&_r=1">
+                <img src={tiktok} alt="twitter icon" />
+              </a>
+              <a target="_blank" href="https://instagram.com/soumaqar?igshid=MzRlODBiNWFlZA=="><img src={instagram} alt="twitter icon" /></a>
+              <a target="_blank" href="https://x.com/soumaqar?s=21&t=3FI4TtL_IYnC6NntJvy8Rw"><img src={twitter} alt="twitter icon" /></a>
              </div>
           </div>
           <ul className="footerPageLink">
               <h6 className="text-white text-[20px]">الروابط</h6>
-              <Link t="/">
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/">
                 <li>الرئيسية</li>
               </Link>
-              <Link to="/conditions">
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/conditions">
                 <li>الشروط والاحكام</li>
               </Link>
-              <Link to="/privacyPolicy">
+              <Link onClick={() =>  window.scrollTo(0, 0)}  to="/privacyPolicy">
                 <li>سياسة الخصوصية</li>
               </Link>
               <li>الأسئلة الشائعة</li>
