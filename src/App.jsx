@@ -2,6 +2,7 @@
 import { lazy,Suspense } from 'react';
 import Navbar from './component/Navbar';
 import { Home } from './pages/Home';
+import { SupportRequestSendSuccessfuly } from './pages/SupportRequestSendSuccessfuly';
 import { Support } from './pages/Support';
 import { PropertyAddedSuccessuly } from './pages/PropertyAddedSuccessuly';
 import { Properties } from './pages/Properties';
@@ -25,7 +26,7 @@ const App = () => {
       {/* <Suspense> */}
       {isNavadPage ? null : <Navbar />}
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<SupportRequestSendSuccessfuly/>} />
           <Route path="privacyPolicy" element={<PrivacyPolicy />} />
           <Route path="support" element={<Support />} />
           <Route path="conditions" element={<Conditions />} />
