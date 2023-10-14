@@ -1,5 +1,4 @@
-// import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
-// import './App.css';
+
 import { lazy,Suspense } from 'react';
 import Navbar from './component/Navbar';
 import { Home } from './pages/Home';
@@ -14,7 +13,7 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { useLocation } from 'react-router-dom';
 import { AddYourProperty } from './pages/AddYourProperty';
 import { NavadPage } from './pages/NavadPage';
-import { Routes, Route, Outlet} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 
 const App = () => {
