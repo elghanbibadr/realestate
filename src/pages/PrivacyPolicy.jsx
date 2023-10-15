@@ -4,10 +4,10 @@ import { Callout } from "../component/Callout";
 export const PrivacyPolicy = () => {
   return (
     <>
-      <div className="text-right dinNextLtRegular p-4 mt-10">
+      <div className="text-right dinNextLtRegular p-4 mt-10 ">
         <h5 className=" cyanTitle "> سياسة الخصوصية </h5>
         <h3 className=" dinNextLtBold text-[40px]">سياسة الخصوصية</h3>
-        <p className="text-[16px] rightDir  pl-10    ">
+        <p className=" rightDir  pl-10  text-[17px] opacity-[0.98] font-semibold text-black  ">
           سوم
           <br />
           سياسة الخصوصية

@@ -1,11 +1,13 @@
-
-import pen from "../../assets/pen.png"
-export const Input = ({placeholder,type="text",className}) => {
+import pen from "../../assets/pen.png";
+export const Input = ({ placeholder, type = "text", className }) => {
   return (
-
     <>
-    <input type={type}  placeholder={placeholder} className={`input  relative outline-none       bg-white  max-w-xs placeholder-darkBlue w-full ${className} border-white  `} />
-    {/* <img className="absolute right-2" src={pen} alt='pen icon' /> */}
+      <input
+        type={type}
+        placeholder={placeholder}
+        className={`input  relative outline-none       bg-white  max-w-xs placeholder-darkBlue w-full ${className} border-white mb-6 `}
+      />
+      {/* <img className="absolute right-2" src={pen} alt='pen icon' /> */}
     </>
-    )
-}
+  );
+};
