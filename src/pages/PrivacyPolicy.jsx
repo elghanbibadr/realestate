@@ -7,7 +7,9 @@ export const PrivacyPolicy = () => {
       <div className="text-right dinNextLtRegular p-4 mt-10 ">
         <h5 className=" cyanTitle "> سياسة الخصوصية </h5>
         <h3 className=" dinNextLtBold text-[40px]">سياسة الخصوصية</h3>
-        <p className=" rightDir  pl-10  text-[17px] opacity-[0.98] font-semibold text-black  ">
+        <h6 className="text-[24px] mb-10">آخر تحديث 14 / 06 / 2023 م</h6>
+
+        <p className=" rightDir  pl-10  text-[17px] opacity-[0.99] font-semibold text-black  ">
           سوم
           <br />
           سياسة الخصوصية

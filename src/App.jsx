@@ -43,8 +43,12 @@ const App = () => {
         <Route path="map" element={<Map />} />
       </Routes>
       {/* </Suspense> */}
-      <Callout />
-      <Footer />
+      {isNavadPage ? null : (
+        <>
+          <Callout />
+          <Footer />
+        </>
+      )}
     </Suspense>
   );
 };

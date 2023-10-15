@@ -1,8 +1,12 @@
-
-const Label = ({text,className}) => {
+const Label = ({ text, className }) => {
   return (
-    <p className={` text-[18px]  mb-2 text-darkBlue dinNextLtBold ${className}  `}> {text} </p>
-  )
-}
+    <p
+      className={` text-[18px] mt-6 mb-2 text-darkBlue dinNextLtBold ${className}  `}
+    >
+      {" "}
+      {text}{" "}
+    </p>
+  );
+};
 
-export default Label
+export default Label;
