@@ -22,7 +22,7 @@ export const Properties = () => {
           />
 
           <img
-            className="absolute right-4 top-4"
+            className="absolute right-0 top-4"
             src={searchIcon}
             alt="search icon "
           />

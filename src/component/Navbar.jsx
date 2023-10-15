@@ -12,17 +12,15 @@ const Navbar = () => {
   return (
     <header className="p-4 bg-white ">
       <nav className="flex justify-between ">
-        <ul className="text-darkBlue w-[40%] flex items-center   justify-between text-[16px]">
-          <li className="bg-darkBlue text-white flex items-center  py-1 pt-2 px-5 rounded-full ">
-            <img
-              className="h-[18px] relative  w-[18px] mr-2"
-              src={icon}
-              alt="icon-house"
-            />
-            <NavLink to="/addyourproperties" activeClassName="active">
-              <button className="text-[14px]">اعرض عقارك</button>
-            </NavLink>
-          </li>
+        <ul className="text-darkBlue w-[50%] flex items-center   justify-between text-[16px]">
+          <Link to="/addyourproperties">
+            <li className="bg-darkBlue h-[50px] w-[156px] text-white flex items-center justify-center rounded-full ">
+              <img className="relative  mr-2" src={icon} alt="icon-house" />
+              <button className="text-[16px]   dinNextLtRegular">
+                اعرض عقارك
+              </button>
+            </li>
+          </Link>
           <NavLink to="login" className="nav-link" activeClassName="active">
             <li className="text-darkBlue">تسجيل دخول</li>
           </NavLink>
@@ -57,7 +55,7 @@ const Navbar = () => {
         </div>
       </nav>
       {navOpen && (
-        <ul className="absolute z-10 bg-darkBlue p-20 text-white text-[48px] text-right  w-full left-0 right-0  bottom-0 top-[4.8rem]">
+        <ul className="z-10 fixed navColapse p-20 text-white text-[48px] text-right  w-full left-0 right-0  bottom-0 top-[4.8rem]">
           <Link to="/support" onClick={() => setNavOpen(false)}>
             <li className="cursor-pointer hover:text-cyan">الدعم</li>
           </Link>

@@ -5,7 +5,7 @@ import { Input } from "../component/UI/Input";
 
 export const Support = () => {
   return (
-    <div className="grid support grid-cols-2 mt-10 p-4 max-w-[1400px] mx-auto">
+    <div className="grid support grid-cols-2 mt-10  p-10 max-w-[1400px] mx-auto">
       <div className="dinNextLtBold">
         <h5 className="cyanTitle">الدعم</h5>
         <h3 className=" text-[40px]">واجهت مشاكل بالموقع؟</h3>

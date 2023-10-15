@@ -127,7 +127,11 @@ img{
 }
 
 
-
+.addPropertyMap-container{
+  height: 230px;
+  width: 58%;
+  border-radius: 4px;
+}
 .nav-link {
   text-decoration: none;
   margin: 10px;
@@ -138,6 +142,12 @@ img{
   border-bottom: 2px solid #161042; /* Adjust the styling as needed */
 }
 
+
+
+.navColapse{
+  backdrop-filter: blur(8px) !important;
+  background: rgba(22, 16, 66, 0.802)  /* background:red !important; */
+}
 
 /* Remove default number input arrows */
 input[type="number"]::-webkit-inner-spin-button,

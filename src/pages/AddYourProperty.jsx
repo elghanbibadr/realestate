@@ -3,6 +3,7 @@ import Select from "../component/UI/Select";
 import { Input } from "../component/UI/Input";
 import plusIcon from "../assets/plusIcon.png";
 import { useState } from "react";
+import MyMap from "../component/MyMap";
 import pen from "../assets/pen.png";
 import { Link } from "react-router-dom";
 import map from "../assets/map1.png";
@@ -19,7 +20,7 @@ export const AddYourProperty = () => {
       <div className="dinNextLtBold p-4 pr-20">
         <h5 className="cyanTitle text-[24px]">اعرض عقارك </h5>
         <h3 className=" text-[40px]">ابدا بيع عقارك </h3>
-        <h4 className="dinNextLtRegular">
+        <h4 className="dinNextLtRegular text-[24px]">
           {" "}
           ! بكل سهولة، وفريقنا بيكون معك بكل خطوة{" "}
         </h4>
@@ -198,6 +199,7 @@ export const AddYourProperty = () => {
                 <Input
                   className="placeholder:text-[#5B6268]"
                   placeholder="أدخل"
+                  withPen={true}
                 />
               </div>
               <div className="mb-6">
@@ -274,9 +276,10 @@ export const AddYourProperty = () => {
                   className="dinNextLtRegular text-[29px] mt-0 "
                   text="اكتب لنا مواصفات عقارك"
                 />
-                <Input
+
+                <input
                   placeholder="ادخل مواصفات دقيقة لعقارك "
-                  className="pb-20 pt-6 text-[19px] w-full max-w-full  placeholder:text-[#5B6268]"
+                  className={`input   outline-none    pb-[140px] pt-6 text-[19px]   w-[96%]    bg-white   placeholder:text-[#5B6268]   border-white mb-6   `}
                 />
               </div>
             </div>
@@ -290,7 +293,11 @@ export const AddYourProperty = () => {
                   className="dinNextLtRegular text-[29px] mt-0 "
                   text="حدد على الخريطة لدقة اكبر"
                 />
-                <img className="mt-6" src={map} alt="map image" />
+                <MyMap
+                  zoomControl={false}
+                  fullscreenControl={false}
+                  containerClassName="addPropertyMap-container"
+                />
               </div>
 
               <div>
