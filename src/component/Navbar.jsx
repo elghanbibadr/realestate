@@ -2,6 +2,8 @@ import En from "../assets/En.png";
 import Menu from "../assets/Menu.png";
 import logo from "../assets/logo.png";
 import icon from "../assets/icon-house.png";
+import line from "../assets/line 1.png";
+
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -55,17 +57,25 @@ const Navbar = () => {
         </div>
       </nav>
       {navOpen && (
-        <ul className="z-10 fixed navColapse p-20 text-white text-[48px] text-right  w-full left-0 right-0  bottom-0 top-[4.8rem]">
+        <ul className="z-10 absolute  navColapse p-20 text-white text-[48px] text-right  w-full left-0 right-0  bottom-0 top-[4.8rem]">
           <Link to="/support" onClick={() => setNavOpen(false)}>
             <li className="cursor-pointer hover:text-cyan">الدعم</li>
           </Link>
           <Link to="/privacyPolicy" onClick={() => setNavOpen(false)}>
-            <li className="cursor-pointer hover:text-cyan">سياسة الخصوصية</li>
+            <li className="cursor-pointer my-8 hover:text-cyan">
+              سياسة الخصوصية
+            </li>
           </Link>
           <Link to="/conditions" onClick={() => setNavOpen(false)}>
-            <li className="cursor-pointer hover:text-cyan">الشروط و الأحكام</li>
+            <li className="cursor-pointer my-8 hover:text-cyan">
+              الشروط و الأحكام
+            </li>
           </Link>
-          <li className="cursor-pointer hover:text-cyan">أسئلة شائعة</li>
+          <li className="cursor-pointer    hover:text-cyan">أسئلة شائعة</li>
+          <li>
+            {" "}
+            <img className="mt-8" src={line} />{" "}
+          </li>
         </ul>
       )}
     </header>
