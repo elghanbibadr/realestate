@@ -71,7 +71,9 @@ const Navbar = () => {
               الشروط و الأحكام
             </li>
           </Link>
-          <li className="cursor-pointer    hover:text-cyan">أسئلة شائعة</li>
+          <Link to="questions">
+            <li className="cursor-pointer    hover:text-cyan">أسئلة شائعة</li>
+          </Link>
           <li>
             {" "}
             <img className="mt-8" src={line} />{" "}

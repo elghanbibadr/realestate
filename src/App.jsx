@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Navbar from "./component/Navbar";
 import { Home } from "./pages/Home";
+import Questions from "./pages/Questions";
 import Footer from "./component/Footer";
 import { Callout } from "./component/Callout";
 import { useLocation } from "react-router-dom";
@@ -47,6 +48,7 @@ const App = () => {
         />
         <Route path="navad" element={<NavadPage />} />
         <Route path="map" element={<Map />} />
+        <Route path="questions" element={<Questions />} />
       </Routes>
       {/* </Suspense> */}
       {isNavadPage ? null : (
