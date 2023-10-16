@@ -8,7 +8,7 @@ import pen from "../assets/pen.png";
 import { Link } from "react-router-dom";
 import map from "../assets/map1.png";
 
-export const AddYourProperty = () => {
+const AddYourProperty = () => {
   const [selectedSpan, setSelectedSpan] = useState(null);
 
   const handleClick = (index) => {
@@ -342,3 +342,5 @@ export const AddYourProperty = () => {
     </div>
   );
 };
+
+export default AddYourProperty;

@@ -1,4 +1,4 @@
-export const Conditions = () => {
+const Conditions = () => {
   return (
     <div className="text-right dinNextLtRegular p-4 mt-10 ">
       <h5 className=" cyanTitle "> الشروط والأحكام </h5>
@@ -323,3 +323,5 @@ export const Conditions = () => {
     </div>
   );
 };
+
+export default Conditions;

@@ -4,7 +4,7 @@ import { Input } from "../component/UI/Input";
 import filterIcon from "../assets/filterIcon.png";
 import searchIcon from "../assets/searchIcon.png";
 
-export const Properties = () => {
+const Properties = () => {
   return (
     <div>
       <div className="text-center mt-20 ">
@@ -42,3 +42,5 @@ export const Properties = () => {
     </div>
   );
 };
+
+export default Properties;

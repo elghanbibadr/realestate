@@ -3,7 +3,7 @@ import Label from "../component/UI/Label";
 import { Link } from "react-router-dom";
 import { Input } from "../component/UI/Input";
 
-export const Support = () => {
+const Support = () => {
   return (
     <div className="grid support grid-cols-2 mt-10  p-10 max-w-[1400px] mx-auto">
       <div className="dinNextLtBold">
@@ -32,3 +32,5 @@ export const Support = () => {
     </div>
   );
 };
+
+export default Support;

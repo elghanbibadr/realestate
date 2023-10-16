@@ -1,6 +1,6 @@
 import emailSent from "../assets/emailsent.png";
 
-export const SupportRequestSendSuccessfuly = () => {
+const SupportRequestSendSuccessfuly = () => {
   return (
     <div>
       <div className="dinNextLtBold p-4 mt-6 pr-10 rightDir">
@@ -26,3 +26,5 @@ export const SupportRequestSendSuccessfuly = () => {
     </div>
   );
 };
+
+export default SupportRequestSendSuccessfuly;

@@ -1,6 +1,6 @@
 import emailSent from "../assets/emailsent.png";
 
-export const PropertyAddedSuccessuly = () => {
+const PropertyAddedSuccessuly = () => {
   return (
     <div>
       <div className="dinNextLtBold p-4 mt-6 pr-10 rightDir">
@@ -29,3 +29,5 @@ export const PropertyAddedSuccessuly = () => {
     </div>
   );
 };
+
+export default PropertyAddedSuccessuly;

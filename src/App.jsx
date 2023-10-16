@@ -1,20 +1,26 @@
 import { lazy, Suspense } from "react";
 import Navbar from "./component/Navbar";
 import { Home } from "./pages/Home";
-import { SupportRequestSendSuccessfuly } from "./pages/SupportRequestSendSuccessfuly";
-import { Support } from "./pages/Support";
-import { PropertyAddedSuccessuly } from "./pages/PropertyAddedSuccessuly";
-import { Properties } from "./pages/Properties";
-import { Conditions } from "./pages/Conditions";
-import Map from "./pages/Map";
 import Footer from "./component/Footer";
 import { Callout } from "./component/Callout";
-import { Loggin } from "./pages/Loggin";
-import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { useLocation } from "react-router-dom";
-import { AddYourProperty } from "./pages/AddYourProperty";
-import { NavadPage } from "./pages/NavadPage";
 import { Routes, Route } from "react-router-dom";
+
+const Map = lazy(() => import("./pages/Map"));
+const Support = lazy(() => import("./pages/Support"));
+const Loggin = lazy(() => import("./pages/Loggin"));
+const Properties = lazy(() => import("./pages/Properties"));
+const SupportRequestSendSuccessfuly = lazy(() =>
+  import("./pages/SupportRequestSendSuccessfuly")
+);
+const PropertyAddedSuccessuly = lazy(() =>
+  import("./pages/PropertyAddedSuccessuly")
+);
+
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Conditions = lazy(() => import("./pages/Conditions"));
+const AddYourProperty = lazy(() => import("./pages/AddYourProperty"));
+const NavadPage = lazy(() => import("./pages/NavadPage"));
 
 const App = () => {
   const location = useLocation();

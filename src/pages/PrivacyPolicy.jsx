@@ -1,7 +1,7 @@
 import Footer from "../component/Footer";
 import { Callout } from "../component/Callout";
 
-export const PrivacyPolicy = () => {
+const PrivacyPolicy = () => {
   return (
     <>
       <div className="text-right dinNextLtRegular p-4 mt-10 ">
@@ -1179,3 +1179,5 @@ export const PrivacyPolicy = () => {
     </>
   );
 };
+
+export default PrivacyPolicy;
