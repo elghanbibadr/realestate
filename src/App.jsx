@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Navbar from "./component/Navbar";
 import { Home } from "./pages/Home";
 import Questions from "./pages/Questions";
+import PropertyDetails from "./pages/PropertyDetails";
 import Footer from "./component/Footer";
 import { Callout } from "./component/Callout";
 import { useLocation } from "react-router-dom";
@@ -31,7 +32,7 @@ const App = () => {
     <Suspense>
       {isNavadPage ? null : <Navbar />}
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<PropertyDetails />} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />
