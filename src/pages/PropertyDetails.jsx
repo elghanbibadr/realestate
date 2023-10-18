@@ -2,6 +2,7 @@ import headerImg from "../assets/propertyShowCase.png";
 import deg from "../assets/360deg.png";
 import gradient from "../assets/gradient.png";
 import Vector from "../assets/Vector (4).png";
+import descframe from "../assets/descframe.png";
 import badge from "../assets/badge.svg";
 import dottedgrp from "../assets/dottedGroup.png";
 import appartmentmajdia from "../assets/appartmentmajdia.png";
@@ -38,6 +39,31 @@ const PropertyDetails = () => {
           <p className="text-[20px] text-[#5B6268]   dinNextLtRegular">
             معلومات مضمونة وشاملة
           </p>
+        </div>
+      </div>
+
+      {/* properrty desc */}
+      <div className="text-right p-10 ">
+        <h5 className="text-darkBlue dinNextLtRegular text-[32px]">
+          وصف العقار
+        </h5>
+        <div className="text-darkBlue text-[19px] font-semibold rightDir mt-6  ">
+          <p>
+            وصف العقار عن العقار عن العقار وصف وصف العقار وصف عن العقار وصف
+            العقار وصف العقار وصف العقار وصف العقار عن وصف العقار وصف العقار وصف
+            العقار وصف العقار وصف عن وصف العقار عن العقار عن العقار وصف وصف
+            العقار وصف عن العقار وصف العقار وصف العقار وصف العقار وصف العقار عن
+            وصف العقار وصف العقار وصف العقار وصف العقار وصف عن وصف العقار عن
+            العقار عن العقار وصف وصف العقار وصف عن العقار وصف العقار وصف العقار
+            وصف العقار وصف العقار عن ..
+          </p>
+        </div>
+        <div className="text-right mt-10">
+          <img
+            className=" relative left-[12%] "
+            src={descframe}
+            alt="desc of the property "
+          />
         </div>
       </div>
     </>
