@@ -65,6 +65,9 @@ const PropertyDetails = () => {
             alt="desc of the property "
           />
         </div>
+        <button className="text-darkBlue bg-white  dinNextLtRegular  border-darkBlue border-[1px] px-16 py-2 mt-10 rounded-[4px] text-[20px] ">
+          تحميل بروشور العقار
+        </button>
       </div>
     </>
   );
