@@ -40,17 +40,6 @@ export default function Map() {
         </div>
 
         <div className="grid grid-cols-2 gap-6">
-          {/* <GoogleMap
-            options={{
-              streetViewControl: false,
-              mapTypeControl: false, // Remove Map and Satellite buttons
-            }}
-            zoom={13}
-            center={center}
-            mapContainerClassName="map-container"
-          >
-            <Marker position={center} />
-          </GoogleMap> */}
           <MyMap containerClassName="map-container" />
           <div className="h-fit ">
             <div className="flex justify-between items-center  p-4">

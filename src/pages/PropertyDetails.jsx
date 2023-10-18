@@ -3,6 +3,7 @@ import deg from "../assets/360deg.png";
 import gradient from "../assets/gradient.png";
 import Vector from "../assets/Vector (4).png";
 import descframe from "../assets/descframe.png";
+import MyMap from "../component/MyMap";
 import playIcon from "../assets/playVector.png";
 import downloadIcon from "../assets/downloadArrow.png";
 import ellipse from "../assets/Ellipse.png";
@@ -144,6 +145,24 @@ const PropertyDetails = () => {
                 <button className="bg-darkBlue text-[14px] mt-2 px-6 py-2 text-white rounded-md">
                   عرض المشروع
                 </button>
+              </div>
+            </div>
+          </div>
+          {/* cols 2 */}
+          <div>
+            <MyMap />
+            <div className="border-[1px] py-4 rounded-md pr-6 border-[#E2EDF9]">
+              <div className="flex items-center  text-darkBlue text-[18px] dinNextLtRegular font-semibold ">
+                <img className="mt-2" src={success} alt="blue checkmark icon" />
+                <h6> 200 متر عن المسجد</h6>
+              </div>
+              <div className="flex items-center  text-darkBlue text-[18px] dinNextLtRegular font-semibold ">
+                <img className="mt-2" src={success} alt="blue checkmark icon" />
+                <h6> 350 متر عن اقرب حديقة</h6>
+              </div>
+              <div className="flex items-center  text-darkBlue text-[18px] dinNextLtRegular font-semibold ">
+                <img className="mt-2" src={success} alt="blue checkmark icon" />
+                <h6> 380 متر من مستشفى المملكة</h6>
               </div>
             </div>
           </div>
