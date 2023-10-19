@@ -32,7 +32,7 @@ const App = () => {
     <Suspense>
       {isNavadPage ? null : <Navbar />}
       <Routes>
-        <Route index element={<PropertyDetails />} />
+        <Route index element={<Home />} />
         <Route path="privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="support" element={<Support />} />
         <Route path="conditions" element={<Conditions />} />

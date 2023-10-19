@@ -30,7 +30,7 @@ const PropertyDetails = () => {
         src={dottedgrp}
         alt="dotted group cirlces"
       />
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 m-4">
         <img className="self-center mx-6" src={Vector} alt="vector" />
         <img
           className="justify-self-end"
@@ -40,7 +40,7 @@ const PropertyDetails = () => {
       </div>
 
       {/* blue section */}
-      <div className="bg-[#EDF2F7] h-[126px] flex gap-4 items-center rightDir mt-20 p-10">
+      <div className="bg-[#EDF2F7] h-[126px] flex gap-2 items-center rightDir mt-20 p-4">
         <img className=" mt-6" src={badge} alt="blue badge icon" />
         <div className=" ">
           <h4 className="cyanTitle dinNextLtBold text-[32px]">
@@ -53,7 +53,7 @@ const PropertyDetails = () => {
       </div>
 
       {/* properrty desc */}
-      <div className="text-right p-10 ">
+      <div className="text-right p-4 ">
         <h5 className="text-darkBlue dinNextLtRegular text-[32px]">
           وصف العقار
         </h5>
@@ -68,9 +68,9 @@ const PropertyDetails = () => {
             وصف العقار وصف العقار عن ..
           </p>
         </div>
-        <div className="text-right mt-10">
+        <div className="text-right mt-10 flex">
           <img
-            className=" relative left-[12%] "
+            className="relative lg:mx-auto  "
             src={descframe}
             alt="desc of the property "
           />
@@ -147,7 +147,7 @@ const PropertyDetails = () => {
                 <p className="text-darkBlue text-[16px]">
                   هذا العقار من ضمن مشروع تطوير
                 </p>
-                <button className="bg-darkBlue text-[14px] mt-2 px-6 py-2 text-white rounded-md">
+                <button className="bg-darkBlue cursor-not-allowed opacity-60  text-[14px] mt-2 px-6 py-2 text-white rounded-md disabled">
                   عرض المشروع
                 </button>
               </div>
