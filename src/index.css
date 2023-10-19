@@ -21,14 +21,10 @@
 }
 @font-face {
   font-family: 'DINNextLT-regular';
-  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-4.ttf') format('truetype');
+  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-2.ttf') format('truetype');
 }
 
-/* @font-face {
-  font-family: 'DINNextLT-regular';
-  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-4.ttf') format('truetype');
-}
- */
+
 
 
 nav{
