@@ -49,7 +49,7 @@ const Loggin = () => {
             <Link to="/navad">
               <button className="btn block mt-5 bg-darkGreen text-white w-full btn-accent max-w-xs hover:bg-darkGreen">
                 {" "}
-                توثيق عن طريق نفاد{" "}
+                توثيق عن طريق نفاذ
               </button>
             </Link>
           )}

@@ -6,6 +6,7 @@ import descframe from "../assets/descframe.png";
 import MyMap from "../component/MyMap";
 import playIcon from "../assets/playVector.png";
 import downloadIcon from "../assets/downloadArrow.png";
+import badr from "../assets/badr.png";
 import ellipse from "../assets/Ellipse.png";
 import success from "../assets/success.png";
 import badge from "../assets/badge.svg";
@@ -31,7 +32,11 @@ const PropertyDetails = () => {
       />
       <div className="grid grid-cols-2">
         <img className="self-center mx-6" src={Vector} alt="vector" />
-        <img src={appartmentmajdia} alt="appartment detail image" />
+        <img
+          className="justify-self-end"
+          src={appartmentmajdia}
+          alt="appartment detail image"
+        />
       </div>
 
       {/* blue section */}
@@ -89,10 +94,10 @@ const PropertyDetails = () => {
         <h5 className="text-darkBlue  mb-6 dinNextLtRegular text-[32px]">
           مميزات العقار
         </h5>
-        <div className="grid grid-cols-3 gap-4 ">
+        <div className="grid grid-cols-3 gap-4  grid-rows-[540px]">
           {/* cols 1 */}
           <div>
-            <div className="border-[1px] py-4 rounded-md pr-6 border-[#E2EDF9]">
+            <div className="border-[1px] py-4 h-[410px] flex flex-col justify-between rounded-md pr-6 border-[#E2EDF9]">
               <div className="flex items-center  text-darkBlue text-[18px] dinNextLtRegular font-semibold ">
                 <img className="mt-2" src={success} alt="blue checkmark icon" />
                 <h6> ترخيص البناء</h6>
@@ -150,7 +155,10 @@ const PropertyDetails = () => {
           </div>
           {/* cols 2 */}
           <div>
-            <MyMap />
+            <MyMap
+              containerClassName="h-[375px] mb-2 w-full rounded-md"
+              fullscreenControl={false}
+            />
             <div className="border-[1px] py-4 rounded-md pr-6 border-[#E2EDF9]">
               <div className="flex items-center  text-darkBlue text-[18px] dinNextLtRegular font-semibold ">
                 <img className="mt-2" src={success} alt="blue checkmark icon" />
@@ -164,6 +172,33 @@ const PropertyDetails = () => {
                 <img className="mt-2" src={success} alt="blue checkmark icon" />
                 <h6> 380 متر من مستشفى المملكة</h6>
               </div>
+            </div>
+          </div>
+          {/* cols 3 */}
+          <div className="text-center bg-[#EDF2F7] p-4 ">
+            <img
+              className="mx-auto h-[146px] w-[146px]"
+              src={badr}
+              alt="badr image"
+            />
+            <h6 className="text-darkBlue my-4 text-[21px] dinNextLtRegular font-semibold">
+              تواصل مع بدر من سوم
+            </h6>
+            <p className="text-darkBlue  dinNextLtRegular text-[15px]  font-semibold ">
+              فريقنا بيساعدك تختار افضل عقار لك، سواء كنت تدور او عينك على عقار.
+              <br />
+              <br />
+              احنا هنا نساعدك بكل التفاصيل، انت اختار واترك الباقي علينا !
+            </p>
+            <div className="dinNextLtBold flex flex-col text-[19px] mt-20 text-white">
+              <button className="btn bg-darkBlue   btn-accent  mb-2  hover:bg-darkBlue">
+                {" "}
+                واتس اب{" "}
+              </button>
+              <button className="btn bg-cyan   btn-accent   hover:bg-cyan">
+                {" "}
+                حجز موعد زيارة{" "}
+              </button>
             </div>
           </div>
         </div>

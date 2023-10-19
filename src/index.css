@@ -21,9 +21,14 @@
 }
 @font-face {
   font-family: 'DINNextLT-regular';
-  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-2.ttf') format('truetype');
+  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-4.ttf') format('truetype');
 }
 
+/* @font-face {
+  font-family: 'DINNextLT-regular';
+  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-4.ttf') format('truetype');
+}
+ */
 
 
 nav{
@@ -39,13 +44,13 @@ nav ul button {
 .dinNextLtBold,.cyanTitle,h1{
   font-family: 'DINNextLT-bold' ,sans-serif !important;
 }
-/* .dinNextLt{
-  font-family: 'DINNextLT-bold' ,sans-serif !important;
-} */
+
 
 .dinNextLtRegular{
   font-family: 'DINNextLT-regular' ,sans-serif !important;
 }
+
+
 
 
 /* CUSTOM STYLES */
@@ -99,7 +104,6 @@ footer{
   direction: rtl !important;
 }
 /* INPUTS STYLING */
-
 
 select {
   direction:rtl !important;
