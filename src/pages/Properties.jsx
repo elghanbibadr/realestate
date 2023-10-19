@@ -3,6 +3,7 @@ import group2 from "../assets/group2.png";
 import { Input } from "../component/UI/Input";
 import filterIcon from "../assets/filterIcon.png";
 import searchIcon from "../assets/searchIcon.png";
+import { Link } from "react-router-dom";
 
 const Properties = () => {
   return (
@@ -30,14 +31,30 @@ const Properties = () => {
       </div>
 
       <div className="grid gap-10 grid-cols-2 cursor-pointer w-[60%] mx-auto mt-20">
-        <img src={group1} alt="property group 1 image" />
-        <img src={group2} alt="property group 1 image" />
-        <img src={group1} alt="property group 1 image" />
-        <img src={group2} alt="property group 1 image" />
-        <img src={group1} alt="property group 1 image" />
-        <img src={group2} alt="property group 1 image" />
-        <img src={group1} alt="property group 1 image" />
-        <img src={group2} alt="property group 1 image" />
+        <Link to="/propertydetails">
+          <img src={group1} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group2} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group1} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group2} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group1} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group2} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group1} alt="property group 1 image" />
+        </Link>
+        <Link to="/propertydetails">
+          <img src={group2} alt="property group 1 image" />
+        </Link>
       </div>
     </div>
   );

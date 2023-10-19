@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import Navbar from "./component/Navbar";
 import { Home } from "./pages/Home";
 import Questions from "./pages/Questions";
-import PropertyDetails from "./pages/PropertyDetails";
 import Footer from "./component/Footer";
 import { Callout } from "./component/Callout";
 import { useLocation } from "react-router-dom";
@@ -23,6 +22,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Conditions = lazy(() => import("./pages/Conditions"));
 const AddYourProperty = lazy(() => import("./pages/AddYourProperty"));
 const NavadPage = lazy(() => import("./pages/NavadPage"));
+const PropertyDetails = lazy(() => import("./pages/PropertyDetails"));
 
 const App = () => {
   const location = useLocation();
@@ -39,6 +39,7 @@ const App = () => {
         <Route path="login" element={<Loggin />} />
         <Route path="properties" element={<Properties />} />
         <Route path="addyourproperties" element={<AddYourProperty />} />
+        <Route path="propertydetails" element={<PropertyDetails />} />
         <Route
           path="propertyaddedsuccessfuly"
           element={<PropertyAddedSuccessuly />}
