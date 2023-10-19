@@ -191,14 +191,18 @@ const PropertyDetails = () => {
               احنا هنا نساعدك بكل التفاصيل، انت اختار واترك الباقي علينا !
             </p>
             <div className="dinNextLtBold flex flex-col text-[19px] mt-20 text-white">
-              <button className="btn bg-darkBlue   btn-accent  mb-2  hover:bg-darkBlue">
-                {" "}
-                واتس اب{" "}
-              </button>
-              <button className="btn bg-cyan   btn-accent   hover:bg-cyan">
-                {" "}
-                حجز موعد زيارة{" "}
-              </button>
+              <a target="_blank" href="https://wa.me/966504649994">
+                <button className="btn bg-darkBlue w-full  btn-accent  mb-4  hover:bg-darkBlue">
+                  {" "}
+                  واتس اب{" "}
+                </button>
+              </a>
+              <a target="_blank" href="https://forms.gle/RjUVjKaABhg6UCTN8">
+                <button className="btn bg-cyan w-full  btn-accent   hover:bg-cyan">
+                  {" "}
+                  حجز موعد زيارة{" "}
+                </button>
+              </a>
             </div>
           </div>
         </div>
