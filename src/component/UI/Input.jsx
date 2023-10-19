@@ -14,7 +14,7 @@ export const Input = ({
       />
       {withPen && (
         <img
-          className=" h-4 w-4 absolute left-12 top-4"
+          className=" h-4 w-4 absolute left-[5%] xl:left-[12%] 2xl:left-[32%] top-4"
           src={pen}
           alt="pen icon"
         />
