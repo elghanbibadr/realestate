@@ -1,11 +1,14 @@
 import headerImg from "../assets/propertyShowCase.png";
 import deg from "../assets/360deg.png";
+import livingroom from "../assets/livingroom.avif";
 import gradient from "../assets/gradient.png";
+import { useState } from "react";
 import Vector from "../assets/Vector (4).png";
 import descframe from "../assets/descframe.png";
 import MyMap from "../component/MyMap";
 import playIcon from "../assets/playVector.png";
 import downloadIcon from "../assets/downloadArrow.png";
+import headersvg from "../assets/headersvg.svg";
 import badr from "../assets/badr.png";
 import ellipse from "../assets/Ellipse.png";
 import success from "../assets/success.png";
@@ -14,29 +17,60 @@ import dottedgrp from "../assets/dottedGroup.png";
 import appartmentmajdia from "../assets/appartmentmajdia.png";
 
 const PropertyDetails = () => {
+  const [activeItem, setActiveItem] = useState(1);
+
+  const handleItemClick = (itemNumber) => {
+    setActiveItem(itemNumber);
+  };
+
   return (
-    <>
-      <div className="relative ">
+    <div className="mx-auto max-w-[1440px] ">
+      <div className="relative  ">
         <img className="absolute right-10 top-10" src={deg} alt="deg icon" />
-        <img
-          className=" h-[540px] w-full  object-fill "
-          src={headerImg}
-          alt="header image"
-        />
+        <div className="carousel w-full">
+          <div id="item1" className="carousel-item w-full">
+            <img src={livingroom} className="w-full" />
+          </div>
+          <div id="item2" className="carousel-item w-full">
+            <img src={livingroom} className="w-full" />
+          </div>
+          <div id="item3" className="carousel-item w-full">
+            <img src={livingroom} className="w-full" />
+          </div>
+          <div id="item4" className="carousel-item w-full">
+            <img src={livingroom} className="w-full" />
+          </div>
+        </div>
         <img className="absolute left-0 top-10" src={gradient} alt="deg icon" />
       </div>
-      <img
-        className="mx-auto mt-10"
-        src={dottedgrp}
-        alt="dotted group cirlces"
-      />
-      <div className="grid grid-cols-2 m-4">
-        <img className="self-center mx-6" src={Vector} alt="vector" />
-        <img
-          className="justify-self-end"
-          src={appartmentmajdia}
-          alt="appartment detail image"
-        />
+
+      <div className="flex justify-center w-full py-2 gap-2 mt-6">
+        {Array.from({ length: 4 }, (_, index) => (
+          <a key={index} href={`#item${index + 1}`}>
+            <div
+              className={` w-4 h-4 rounded-full cursor-pointer ${
+                activeItem === index + 1
+                  ? "bg-cyan"
+                  : "bg-white border-cyan border-2"
+              }`}
+              onClick={() => handleItemClick(index + 1)}
+            ></div>
+          </a>
+        ))}
+      </div>
+      {/* carousel */}
+
+      <div className="m-4">
+        <div className="flex text-right items-center text-cyan justify-between">
+          <div className="flex items-center">
+            <p className="self-center mt-6 text-[19px] ">ريال</p>
+            <h2 className="text-[40px]">750,000</h2>
+          </div>
+          <div>
+            <h1 className="text-[40px]">شقة الماجدية جديدة</h1>
+            <p className="text-[24px]">حي الملقا، شارع ١٢٣ الرياض</p>
+          </div>
+        </div>
       </div>
 
       {/* blue section */}
@@ -57,7 +91,7 @@ const PropertyDetails = () => {
         <h5 className="text-darkBlue dinNextLtRegular text-[32px]">
           وصف العقار
         </h5>
-        <div className="text-darkBlue text-[19px] font-semibold rightDir mt-6  ">
+        <div className="text-darkBlue dinNextLtRegular text-[19px]  rightDir mt-6  ">
           <p>
             وصف العقار عن العقار عن العقار وصف وصف العقار وصف عن العقار وصف
             العقار وصف العقار وصف العقار وصف العقار عن وصف العقار وصف العقار وصف
@@ -207,7 +241,7 @@ const PropertyDetails = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

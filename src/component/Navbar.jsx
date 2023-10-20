@@ -12,7 +12,7 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className="p-4 bg-white ">
+    <header className="p-4   bg-white ">
       <nav className="flex justify-between ">
         <ul className="text-darkBlue w-[50%] flex items-center   justify-between text-[16px]">
           <Link to="/addyourproperties">
