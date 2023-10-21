@@ -1,20 +1,22 @@
-import headerImg from "../assets/propertyShowCase.png";
+import { useState } from "react";
 import deg from "../assets/360deg.png";
+import popular from "../assets/Popular.svg";
 import livingroom from "../assets/livingroom.avif";
 import gradient from "../assets/gradient.png";
-import { useState } from "react";
-import Vector from "../assets/Vector (4).png";
 import descframe from "../assets/descframe.png";
 import MyMap from "../component/MyMap";
 import playIcon from "../assets/playVector.png";
 import downloadIcon from "../assets/downloadArrow.png";
-import headersvg from "../assets/headersvg.svg";
 import badr from "../assets/badr.png";
+import vector2 from "../assets/Vector (5).png";
+import tourVideo from "../assets/Apartment Virtual Tour.mp4";
+import vector1 from "../assets/Vector (6).png";
+import vector3 from "../assets/Vector (7).png";
+import vector4 from "../assets/Vector (8).png";
+import vector5 from "../assets/Vector (9).png";
 import ellipse from "../assets/Ellipse.png";
 import success from "../assets/success.png";
 import badge from "../assets/badge.svg";
-import dottedgrp from "../assets/dottedGroup.png";
-import appartmentmajdia from "../assets/appartmentmajdia.png";
 
 const PropertyDetails = () => {
   const [activeItem, setActiveItem] = useState(1);
@@ -48,10 +50,10 @@ const PropertyDetails = () => {
         {Array.from({ length: 4 }, (_, index) => (
           <a key={index} href={`#item${index + 1}`}>
             <div
-              className={` w-4 h-4 rounded-full cursor-pointer ${
+              className={` w-[14px] h-[14px] rounded-full cursor-pointer ${
                 activeItem === index + 1
                   ? "bg-cyan"
-                  : "bg-white border-cyan border-2"
+                  : "bg-white border-cyan border-[1px]"
               }`}
               onClick={() => handleItemClick(index + 1)}
             ></div>
@@ -59,6 +61,10 @@ const PropertyDetails = () => {
         ))}
       </div>
       {/* carousel */}
+
+      <div className="rightDir">
+        <img src={popular} alt="pupolar vector" />
+      </div>
 
       <div className="m-4">
         <div className="flex text-right items-center text-cyan justify-between">
@@ -69,6 +75,28 @@ const PropertyDetails = () => {
           <div>
             <h1 className="text-[40px]">شقة الماجدية جديدة</h1>
             <p className="text-[24px]">حي الملقا، شارع ١٢٣ الرياض</p>
+            <div className="grid grid-cols-5 gap-6 mt-6 text-center rightDir text-darkBlue dinNextLtRegular text-[17px] ">
+              <div className="text-center">
+                <img className="mx-auto" src={vector5} alt="vector 1" />
+                <p> 300 متر مربع</p>
+              </div>
+              <div className="text-center">
+                <img className="mx-auto" src={vector2} alt="vector 1" />
+                <p> 3 أدوار </p>
+              </div>
+              <div>
+                <img className="mx-auto" src={vector1} alt="vector 1" />
+                <p> 5 غرف نوم</p>
+              </div>
+              <div>
+                <img className="mx-auto" src={vector3} alt="vector 1" />
+                <p>واجهة شرقية</p>
+              </div>
+              <div>
+                <img className="mx-auto" src={vector4} alt="vector 1" />
+                <p> موقف خاص</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -118,8 +146,12 @@ const PropertyDetails = () => {
         <h5 className="text-darkBlue m-5 dinNextLtRegular text-[32px]">
           خذ جولة بالعقار مع فريقنا{" "}
         </h5>
-        <div className="bg-[#EDF2F7] h-[420px] text-center flex justify-center items-center mt-6">
-          <img src={playIcon} alt="play a video icon" />
+        <div className="bg-[#EDF2F7] h-[520px] text-center flex justify-center items-center mt-6">
+          {/* <img src={playIcon} alt="play a video icon" /> */}
+          <video className="w-full h-full object-cover" controls autoPlay>
+            <source src={tourVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
 
