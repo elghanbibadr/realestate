@@ -4,7 +4,10 @@ import popular from "../assets/Popular.svg";
 import livingroom from "../assets/livingroom.avif";
 import gradient from "../assets/gradient.png";
 import descframe from "../assets/descframe.png";
+import store from "../assets/store.png";
 import MyMap from "../component/MyMap";
+import vectoralt from "../assets/vector-square-alt.png";
+import beddouble from "../assets/bed-double.png";
 import playIcon from "../assets/playVector.png";
 import downloadIcon from "../assets/downloadArrow.png";
 import badr from "../assets/badr.png";
@@ -12,10 +15,14 @@ import vector2 from "../assets/Vector (5).png";
 import tourVideo from "../assets/Apartment Virtual Tour.mp4";
 import vector1 from "../assets/Vector (6).png";
 import vector3 from "../assets/Vector (7).png";
+import bath from "../assets/bath.png";
+import line from "../assets/text.png";
 import vector4 from "../assets/Vector (8).png";
+import car from "../assets/car.png";
 import vector5 from "../assets/Vector (9).png";
 import ellipse from "../assets/Ellipse.png";
 import success from "../assets/success.png";
+import rulercombined from "../assets/ruler-combined.png";
 import badge from "../assets/badge.svg";
 
 const PropertyDetails = () => {
@@ -78,7 +85,7 @@ const PropertyDetails = () => {
             <div className="grid grid-cols-5 gap-6 mt-6 text-center rightDir text-darkBlue dinNextLtRegular text-[17px] ">
               <div className="text-center">
                 <img className="mx-auto" src={vector5} alt="vector 1" />
-                <p> 300 متر مربع</p>
+                <p> 300 متر مربع </p>
               </div>
               <div className="text-center">
                 <img className="mx-auto" src={vector2} alt="vector 1" />
@@ -130,12 +137,56 @@ const PropertyDetails = () => {
             وصف العقار وصف العقار عن ..
           </p>
         </div>
-        <div className="text-right mt-10 flex">
-          <img
-            className="relative lg:mx-auto  "
-            src={descframe}
-            alt="desc of the property "
-          />
+        <div className=" mt-10 flex gap-10  rightDir  text-darkBlue dinNextLtRegular  text-[26px]">
+          <div className="flex">
+            <img src={rulercombined} alt="ruler combined image" />
+            <p className="mr-2">300 متر مربع</p>
+            <img
+              className="h-[24px] relative right-6 top-3"
+              src={line}
+              alt="line icon "
+            />
+          </div>
+          <div className="flex">
+            <img src={vectoralt} alt="ruler combined image" />
+            <p className="mr-2"> 3 أدوار</p>
+            <img
+              className="h-[24px] relative right-6 top-3"
+              src={line}
+              alt="line icon "
+            />
+          </div>
+          <div className="flex">
+            <img src={store} alt="ruler combined image" />
+            <p className="mr-2"> جديد</p>
+            <img
+              className="h-[24px] relative right-6 top-3"
+              src={line}
+              alt="line icon "
+            />
+          </div>
+          <div className="flex">
+            <img src={beddouble} alt="ruler combined image" />
+            <p className="mr-2"> 6 غرف نوم</p>
+            <img
+              className="h-[24px] relative right-6 top-3"
+              src={line}
+              alt="line icon "
+            />
+          </div>
+          <div className="flex">
+            <img src={bath} alt="ruler combined image" />
+            <p className="mr-2"> 3 حمامات </p>
+            <img
+              className="h-[24px] relative right-6 top-3"
+              src={line}
+              alt="line icon "
+            />
+          </div>
+          <div className="flex">
+            <img src={car} alt="ruler combined image" />
+            <p className="mr-2"> موقف خاص</p>
+          </div>
         </div>
         <button className="text-darkBlue bg-white  dinNextLtRegular  border-darkBlue border-[1px] px-16 py-2 mt-10 rounded-[4px] text-[20px] ">
           تحميل بروشور العقار
@@ -148,7 +199,7 @@ const PropertyDetails = () => {
         </h5>
         <div className="bg-[#EDF2F7] h-[520px] text-center flex justify-center items-center mt-6">
           {/* <img src={playIcon} alt="play a video icon" /> */}
-          <video className="w-full h-full object-cover" controls autoPlay>
+          <video className="w-full h-full object-cover" controls>
             <source src={tourVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

@@ -24,11 +24,7 @@
   src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-2.ttf') format('truetype');
 }
 
-.video-element {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 
 nav{
