@@ -3,7 +3,7 @@ import twitter from "../assets/twitter.png"
 import instagram from "../assets/instagram.png"
 import tiktok from "../assets/tik_tok.png"
 import whatsapp from "../assets/whatsapp.png"
-import line from "../assets/line 1.png"
+import line from "../assets/Line 1.png"
 import { Link } from "react-router-dom"
 
 const Footer = () => {
