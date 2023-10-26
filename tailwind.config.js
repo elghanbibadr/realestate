@@ -1,6 +1,4 @@
-
 // // import withMT from "@material-tailwind/react/utils/withMT";
-
 
 // // export default withMT({
 // //   content: ["./index.html", "./src/**/*.{js,jsx}"],
@@ -66,25 +64,22 @@ import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-       colors: {
-              darkBlue: "#161042",
-              white: "#ffffff",
-              lightBlueDark:"#3B3A5D",
-              cyan: "#0071F2",
-              textColor: "#6E7681",
-              lightGray: "#A7A7A7",
-              darkGreen :"#11998E"
-            },
+      colors: {
+        darkBlue: "#161042",
+        white: "#ffffff",
+        lightBlueDark: "#3B3A5D",
+        cyan: "#0071F2",
+        textColor: "#6E7681",
+        lightGray: "#A7A7A7",
+        darkGreen: "#11998E",
+      },
     },
   },
   plugins: [daisyui], // Add DaisyUI as a plugin
   daisyui: {
     themes: [],
   },
-}
+};

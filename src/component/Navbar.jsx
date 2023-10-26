@@ -2,7 +2,7 @@ import En from "../assets/En.png";
 import Menu from "../assets/Menu.png";
 import logo from "../assets/logo.png";
 import icon from "../assets/icon-house.png";
-import line from "../assets/line 1.png";
+import line from "../assets/Line 1.png";
 
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
