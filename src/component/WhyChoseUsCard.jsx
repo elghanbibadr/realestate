@@ -1,6 +1,3 @@
-
 export const WhyChoseUsCard = () => {
-  return (
-    <div>WhyChoseUsCard</div>
-  )
-}
+  return <div>WhyChoseUsCard</div>;
+};

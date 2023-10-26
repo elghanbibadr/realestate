@@ -12,10 +12,10 @@ const Support = lazy(() => import("./pages/Support"));
 const Loggin = lazy(() => import("./pages/Loggin"));
 const Properties = lazy(() => import("./pages/Properties"));
 const SupportRequestSendSuccessfuly = lazy(() =>
-  import("./pages/SupportRequestSendSuccessfuly")
+  import("./pages/SupportRequestSendSuccessfuly"),
 );
 const PropertyAddedSuccessuly = lazy(() =>
-  import("./pages/PropertyAddedSuccessuly")
+  import("./pages/PropertyAddedSuccessuly"),
 );
 
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));

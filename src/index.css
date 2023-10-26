@@ -2,132 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 /* TYPOGRAPHY */
 @font-face {
-  font-family: 'sst arabic bold';
-  src: url('fonts/sstArabic/sst-arabic-bold.ttf') format('truetype');
+  font-family: "sst arabic bold";
+  src: url("fonts/sstArabic/sst-arabic-bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'DINNextLT-Medium';
-  src: url('fonts/dinnextlt/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf') format('truetype');
+  font-family: "DINNextLT-Medium";
+  src: url("fonts/dinnextlt/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf")
+    format("truetype");
 }
 
 @font-face {
-  font-family: 'DINNextLT-bold';
-  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Bold-2.ttf') format('truetype');
+  font-family: "DINNextLT-bold";
+  src: url("fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Bold-2.ttf")
+    format("truetype");
 }
 @font-face {
-  font-family: 'DINNextLT-regular';
-  src: url('fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-2.ttf') format('truetype');
+  font-family: "DINNextLT-regular";
+  src: url("fonts/dinnextlt/ArbFONTS-DINNextLTArabic-Regular-2.ttf")
+    format("truetype");
 }
 
-
-
-
-nav{
-  font-family: "sst arabic bold",sans-serif !important;
+nav {
+  font-family: "sst arabic bold", sans-serif !important;
 }
 
 nav ul button {
-  font-family: 'DINNextLT-Medium' ,sans-serif !important;
+  font-family: "DINNextLT-Medium", sans-serif !important;
   font-weight: 400;
 }
 
-
-.dinNextLtBold,.cyanTitle,h1{
-  font-family: 'DINNextLT-bold' ,sans-serif !important;
+.dinNextLtBold,
+.cyanTitle,
+h1 {
+  font-family: "DINNextLT-bold", sans-serif !important;
 }
 
-
-.dinNextLtRegular{
-  font-family: 'DINNextLT-regular' ,sans-serif !important;
+.dinNextLtRegular {
+  font-family: "DINNextLT-regular", sans-serif !important;
 }
-
-
-
 
 /* CUSTOM STYLES */
-body{
-  background-color: #F5F5F5 !important;
+body {
+  background-color: #f5f5f5 !important;
   /* height: 300vh; */
   overflow-x: hidden;
 }
-nav li{
+nav li {
   cursor: pointer;
 }
 
-
-
-
-
-footer ul li,footer p{
-  font-family: 'DINNextLT-regular' ,sans-serif !important;
-  color: #A7A7A7;
+footer ul li,
+footer p {
+  font-family: "DINNextLT-regular", sans-serif !important;
+  color: #a7a7a7;
   margin-block: 10px;
   font-size: 16px;
 }
 
-
- ul li{
-  cursor: pointer;
- }
- 
-footer li{
+ul li {
   cursor: pointer;
 }
 
+footer li {
+  cursor: pointer;
+}
 
-footer{
+footer {
   direction: rtl;
 }
-
-
 
 /* Resuable classes */
 
-.support{
+.support {
   direction: rtl;
 }
-.cyanTitle{
-  color: #0071F2;
+.cyanTitle {
+  color: #0071f2;
   font-size: 24px;
 }
 
-.rightDir{
+.rightDir {
   direction: rtl !important;
 }
 /* INPUTS STYLING */
 
 select {
-  direction:rtl !important;
+  direction: rtl !important;
 }
-select ,input{
-  font-family: 'DINNextLT-regular' ,sans-serif !important;
-
+select,
+input {
+  font-family: "DINNextLT-regular", sans-serif !important;
 }
 
-
-
-body{
+body {
   position: relative;
 }
 
-
-img{
+img {
   cursor: pointer;
 }
 
-.map-container{
- height: 100%;
- width: 100%;
- border-radius: 20px;
+.map-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
 
-
-.addPropertyMap-container{
+.addPropertyMap-container {
   height: 230px;
   width: 58%;
   border-radius: 4px;
@@ -142,11 +125,9 @@ img{
   border-bottom: 2px solid #161042; /* Adjust the styling as needed */
 }
 
-
-
-.navColapse{
+.navColapse {
   backdrop-filter: blur(8px) !important;
-  background: rgba(22, 16, 66, 0.802)  /* background:red !important; */
+  background: rgba(22, 16, 66, 0.802); /* background:red !important; */
 }
 
 /* Remove default number input arrows */
