@@ -23,9 +23,14 @@ const Navbar = () => {
               </button>
             </li>
           </Link>
+          {localStorage.getItem("name") !== null && (
+            <p>{localStorage.getItem("name")} ،اهلًا</p>
+          )}
+          {localStorage.getItem("name") === null && (
           <NavLink to="login" className="nav-link" activeClassName="active">
             <li className="text-darkBlue">تسجيل دخول</li>
           </NavLink>
+          )}
           <li>
             {" "}
             <img className="h-10" src={En} alt="change language icon" />{" "}
