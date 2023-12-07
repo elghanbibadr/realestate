@@ -10,6 +10,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const logout = () => {
+    localStorage.removeItem("name");
+    window.location.reload();
+  }
 
   return (
     <header className="p-4   bg-white ">
@@ -24,7 +28,10 @@ const Navbar = () => {
             </li>
           </Link>
           {localStorage.getItem("name") !== null && (
+            <>
             <p>{localStorage.getItem("name")} ،اهلًا</p>
+            <button onClick={logout} className="text-darkBlue">تسجيل خروج</button>
+            </>
           )}
           {localStorage.getItem("name") === null && (
           <NavLink to="login" className="nav-link" activeClassName="active">
