@@ -123,6 +123,7 @@ const Loggin = () => {
       if(response.data.status !== "WAITING" && response.data.name !== null){
         setUsername(response.data.name.split("-").reverse().join("-"));
         setDateOfBirth(response.data.dateOfBirth);
+        localStorage.setItem("name", response.data.name);
         setIsNafathChecked(true);
         Swal.close();
       }
@@ -204,9 +205,12 @@ const Loggin = () => {
             <input type="text" className="" value={username} disabled={true}/>
             <Label className="mt-4" text="تاريخ الميلاد"/>
             <input type="text" className="" value={dateOfBirth} disabled={true}/>
-             <button className="btn block mt-5 bg-darkGreen text-white w-full btn-accent max-w-xs hover:bg-darkGreen" type="button">
+            <Link to="/map">
+              <button className="btn block mt-5 bg-darkGreen text-white w-full btn-accent max-w-xs hover:bg-darkGreen">
+                {" "}
                 تسجيل
               </button>
+            </Link>
           </form>
         )}
       </div>
