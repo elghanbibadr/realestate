@@ -1,16 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import configureStore from "./Store";
 import App from "./App";
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
-// import { ThemeProvider } from "@material-tailwind/react";
+import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
+import Callout from "./component/Callout";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    {/* <ThemeProvider> */}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-    {/* </ThemeProvider> */}
-  </React.StrictMode>,
-);
+let store = configureStore();
+
+function render(){
+  let root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <Provider store={store}>
+      <App></App>
+    </Provider>
+  );
+store.subscribe(() => root.render(   
+    <Provider store={store}>
+      <App></App>
+    </Provider>)
+    );
+}
+
+
+render();
