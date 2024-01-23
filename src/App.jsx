@@ -1,65 +1,52 @@
-import { lazy, Suspense } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Map from "./pages/Map";
+import Support from "./pages/Support";
+import Properties from "./pages/Properties";
+import SupportRequestSendSuccessfuly from "./pages/SupportRequestSendSuccessfuly";
+import PropertyAddedSuccessuly from "./pages/PropertyAddedSuccessuly";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Conditions from "./pages/Conditions";
+import AddYourProperty from "./pages/AddYourProperty";
+import PropertyDetails from "./pages/PropertyDetails";
 import Navbar from "./component/Navbar";
-import { Home } from "./pages/Home";
+import Home from "./pages/Home";
 import Questions from "./pages/Questions";
 import Footer from "./component/Footer";
-import { Callout } from "./component/Callout";
-import { useLocation } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import Callout from "./component/Callout";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 
-const Map = lazy(() => import("./pages/Map"));
-const Support = lazy(() => import("./pages/Support"));
-const Loggin = lazy(() => import("./pages/Loggin"));
-const Properties = lazy(() => import("./pages/Properties"));
-const SupportRequestSendSuccessfuly = lazy(() =>
-  import("./pages/SupportRequestSendSuccessfuly"),
-);
-const PropertyAddedSuccessuly = lazy(() =>
-  import("./pages/PropertyAddedSuccessuly"),
-);
-
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const Conditions = lazy(() => import("./pages/Conditions"));
-const AddYourProperty = lazy(() => import("./pages/AddYourProperty"));
-const NavadPage = lazy(() => import("./pages/NavadPage"));
-const PropertyDetails = lazy(() => import("./pages/PropertyDetails"));
+function Inner() {
+  return (
+          <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
+          <Route path="/support" element={<Support/>} />
+          <Route path="/conditions" element={<Conditions />} />
+          <Route path="/signup" element={<SignUp />}/>
+          <Route path="/signin" element={<SignIn/>}/>
+          <Route path="/properties" element={<Properties />} />
+          <Route path="/addyourproperties" element={<AddYourProperty/>} />
+          <Route path="/propertydetails" element={<PropertyDetails/>} />
+          <Route path="/propertyaddedsuccessfuly" element={<PropertyAddedSuccessuly/>}/>
+          <Route path="/supportrequestsend" element={<SupportRequestSendSuccessfuly/>}/>
+          <Route path="/map" element={<Map/>} />
+          <Route path="/questions" element={<Questions/>} />
+        </Routes>
+  );
+}
 
 const App = () => {
-  const location = useLocation();
-  const isNavadPage = location.pathname.includes("/navad");
 
   return (
-    <Suspense>
-      {isNavadPage ? null : <Navbar />}
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="privacyPolicy" element={<PrivacyPolicy />} />
-        <Route path="support" element={<Support />} />
-        <Route path="conditions" element={<Conditions />} />
-        <Route path="login" element={<Loggin />} />
-        <Route path="properties" element={<Properties />} />
-        <Route path="addyourproperties" element={<AddYourProperty />} />
-        <Route path="propertydetails" element={<PropertyDetails />} />
-        <Route
-          path="propertyaddedsuccessfuly"
-          element={<PropertyAddedSuccessuly />}
-        />
-        <Route
-          path="supportrequestsend"
-          element={<SupportRequestSendSuccessfuly />}
-        />
-        <Route path="navad" element={<NavadPage />} />
-        <Route path="map" element={<Map />} />
-        <Route path="questions" element={<Questions />} />
-      </Routes>
-      {/* </Suspense> */}
-      {isNavadPage ? null : (
-        <>
-          <Callout />
-          <Footer />
-        </>
-      )}
-    </Suspense>
+      <Router>
+        <Navbar/>
+        <Inner/>
+        <Callout/>
+        <Footer/>
+      </Router>
+  
   );
 };
 
