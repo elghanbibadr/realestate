@@ -2,20 +2,36 @@ import Label from "../component/UI/Label";
 import Select from "../component/UI/Select";
 import { Input } from "../component/UI/Input";
 import plusIcon from "../assets/plusIcon.png";
-import { useState } from "react";
+import { Component, useState } from "react";
 import MyMap from "../component/MyMap";
-import pen from "../assets/pen.png";
 import { Link } from "react-router-dom";
-import map from "../assets/map1.png";
+import { ADD_YOUR_PROPERTY_CHANGE_SELECTED_SPAN } from "../constants/actionTypes";
+import { connect } from "react-redux";
 
-const AddYourProperty = () => {
-  const [selectedSpan, setSelectedSpan] = useState(null);
+const mapStateToProps = (state) => ({
+  ...state.addYourProperty
+});
 
-  const handleClick = (index) => {
-    setSelectedSpan(index);
-  };
+const mapDispatchToProps = (dispatch) => ({
+    onUpdateAddYourPropertyInfo: (payload) =>
+    dispatch({ type: ADD_YOUR_PROPERTY_CHANGE_SELECTED_SPAN, payload }),
+});
 
-  return (
+class AddYourProperty extends Component{
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(value){
+    this.props.onUpdateAddYourPropertyInfo({
+      selectedSpan: value
+    })
+  }
+
+  render(){
+    const { selectedSpan } = this.props;
+    return (
     <div className="text-right  mt-10">
       <div className="dinNextLtBold p-4 pr-20">
         <h5 className="cyanTitle text-[24px]">اعرض عقارك </h5>
@@ -31,7 +47,7 @@ const AddYourProperty = () => {
           <Label className="dinNextLtRegular text-[22px]" text="نوع العقار " />
           <div className=" dinNextLtBold  cursor-pointer mt-6  text-[14px]   ">
             <span
-              onClick={() => handleClick(0)}
+              onClick={() => this.handleClick(0)}
               className={`px-14  border-x py-2  ${
                 selectedSpan === 0
                   ? "bg-darkBlue rounded-md text-white"
@@ -42,7 +58,7 @@ const AddYourProperty = () => {
               شقة
             </span>
             <span
-              onClick={() => handleClick(1)}
+              onClick={() => this.handleClick(1)}
               className={`px-14   border-x py-2 mx-4  ${
                 selectedSpan === 1
                   ? "bg-darkBlue rounded-md text-white"
@@ -53,7 +69,7 @@ const AddYourProperty = () => {
               دبلكس{" "}
             </span>
             <span
-              onClick={() => handleClick(2)}
+              onClick={() => this.handleClick(2)}
               className={`px-14  border-x py-2 mx-4 ${
                 selectedSpan === 2
                   ? "bg-darkBlue rounded-md text-white"
@@ -64,7 +80,7 @@ const AddYourProperty = () => {
               فيلا{" "}
             </span>
             <span
-              onClick={() => handleClick(3)}
+              onClick={() => this.handleClick(3)}
               className={`px-14  border-x py-2  ${
                 selectedSpan === 3
                   ? "bg-darkBlue rounded-md text-white"
@@ -341,6 +357,7 @@ const AddYourProperty = () => {
       </div>
     </div>
   );
-};
+  }
+}
 
-export default AddYourProperty;
+export default connect(mapStateToProps, mapDispatchToProps)(AddYourProperty);
