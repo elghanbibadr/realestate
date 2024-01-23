@@ -1,13 +1,26 @@
 import Hero from "../component/Hero";
-import { WhyUs } from "../component/WhyUs";
-import { WhatWeProvide } from "../component/WhatWeProvide";
-import { Background } from "../component/Background";
-import { ExploreOurProperties } from "../component/ExploreOurProperties";
-import Footer from "../component/Footer";
-import { Callout } from "../component/Callout";
+import WhyUs from "../component/WhyUs";
+import WhatWeProvide from "../component/WhatWeProvide";
+import Background from "../component/Background";
+import ExploreOurProperties from "../component/ExploreOurProperties";
+import { Component } from "react";
+import { connect } from "react-redux";
 
-export const Home = () => {
-  return (
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+class Home extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return (
     <>
       <main className="max-w-[1400px] mx-auto">
         <Hero />
@@ -18,4 +31,7 @@ export const Home = () => {
       </main>
     </>
   );
-};
+}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
