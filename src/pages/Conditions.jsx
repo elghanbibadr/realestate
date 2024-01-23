@@ -1,5 +1,21 @@
-const Conditions = () => {
-  return (
+import { Component } from "react";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+class Conditions extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return (
     <div className="text-right dinNextLtRegular p-4 mt-10 ">
       <h5 className=" cyanTitle "> الشروط والأحكام </h5>
       <h3 className=" dinNextLtBold text-[40px] "> اتفاقية الشروط والأحكام </h3>
@@ -322,6 +338,7 @@ const Conditions = () => {
       </p>
     </div>
   );
-};
+  }
+}
 
-export default Conditions;
+export default connect(mapStateToProps, mapDispatchToProps)(Conditions);
