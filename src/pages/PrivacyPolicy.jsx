@@ -1,8 +1,23 @@
 import Footer from "../component/Footer";
-import { Callout } from "../component/Callout";
+import Callout from "../component/Callout";
+import { Component } from "react";
+import { connect } from "react-redux";
 
-const PrivacyPolicy = () => {
-  return (
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+class PrivacyPolicy extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return (
     <>
       <div className="text-right dinNextLtRegular p-4 mt-10 ">
         <h5 className=" cyanTitle "> سياسة الخصوصية </h5>
@@ -1174,10 +1189,9 @@ const PrivacyPolicy = () => {
           "المساعدة" للحصول على إجابات ومعلومات جهة الاتصال الخاصة بنا.
         </p>
       </div>
-      <Callout />
-      <Footer />
     </>
   );
-};
+  }
+}
 
-export default PrivacyPolicy;
+export default connect(mapStateToProps, mapDispatchToProps)(PrivacyPolicy);
