@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Component, useState } from "react";
 import deg from "../assets/360deg.png";
 import popular from "../assets/Popular.svg";
 import livingroom from "../assets/livingroom.avif";
@@ -24,15 +24,34 @@ import ellipse from "../assets/Ellipse.png";
 import success from "../assets/success.png";
 import rulercombined from "../assets/ruler-combined.png";
 import badge from "../assets/badge.svg";
+import { connect } from "react-redux";
+import { PROPERTY_DETAILS_CHANGE_ACTIVE_ITEM } from "../constants/actionTypes";
 
-const PropertyDetails = () => {
-  const [activeItem, setActiveItem] = useState(1);
+const mapStateToProps = (state) => ({
+  ...state.propertydetails
+});
 
-  const handleItemClick = (itemNumber) => {
-    setActiveItem(itemNumber);
-  };
+const mapDispatchToProps = (dispatch) => ({
+    onUpdatePropertyDetailsInfo: (payload) =>
+    dispatch({ type: PROPERTY_DETAILS_CHANGE_ACTIVE_ITEM, payload }),
+});
 
-  return (
+class PropertyDetails extends Component{
+  constructor(props){
+    super(props);
+
+    this.handleItemClick = this.handleItemClick.bind(this);
+  }
+
+  handleItemClick(value){
+    this.props.onUpdatePropertyDetailsInfo({
+      activeItem: value
+    });
+  }
+
+  render(){
+    const {activeItem} = this.props;
+    return (
     <div className="mx-auto max-w-[1440px] ">
       <div className="relative  ">
         <img className="absolute right-10 top-10" src={deg} alt="deg icon" />
@@ -62,7 +81,7 @@ const PropertyDetails = () => {
                   ? "bg-cyan"
                   : "bg-white border-cyan border-[1px]"
               }`}
-              onClick={() => handleItemClick(index + 1)}
+              onClick={() => this.handleItemClick(index + 1)}
             ></div>
           </a>
         ))}
@@ -326,6 +345,7 @@ const PropertyDetails = () => {
       </div>
     </div>
   );
-};
+  }
+}
 
-export default PropertyDetails;
+export default connect(mapStateToProps, mapDispatchToProps)(PropertyDetails);
